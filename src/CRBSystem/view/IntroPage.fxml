@@ -26,16 +26,16 @@
             </ImageView>
             <HBox alignment="CENTER" prefHeight="169.0" prefWidth="800.0" spacing="60.0" VBox.vgrow="ALWAYS">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="206.0" style="-fx-background-color: white;" text="Login&gt;&gt;">
+                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="206.0" style="-fx-font-size: 35;" stylesheets="@../../../stylesheets/button.css" text="Login&gt;&gt;">
                <font>
-                  <Font name="Comic Sans MS Bold" size="34.0" />
+                  <Font name="Comic Sans MS Bold" size="39.0" />
                </font>
                <effect>
                   <DropShadow />
                </effect></Button>
-                  <Button mnemonicParsing="false" prefHeight="77.0" prefWidth="204.0" style="-fx-background-color: white;" text="SignUp&gt;&gt;">
+                  <Button mnemonicParsing="false" prefHeight="77.0" prefWidth="204.0" style="-fx-font-size: 30;" stylesheets="@../../../stylesheets/button.css" text="SignUp&gt;&gt;">
                <font>
-                  <Font name="Comic Sans MS Bold" size="34.0" />
+                  <Font name="Comic Sans MS Bold" size="33.0" />
                </font>
                <effect>
                   <DropShadow />
