@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="15.0" style="-fx-background-color: white;" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS" GridPane.rowSpan="2" GridPane.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+         <children>
+            <ImageView fitHeight="195.0" fitWidth="513.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/App_Name.PNG" />
+               </image>
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="325.0" fitWidth="684.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/iiitd_building.jpg" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER" prefHeight="169.0" prefWidth="800.0" spacing="60.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="206.0" style="-fx-background-color: white;" text="Login&gt;&gt;">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="34.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect></Button>
+                  <Button mnemonicParsing="false" prefHeight="77.0" prefWidth="204.0" style="-fx-background-color: white;" text="SignUp&gt;&gt;">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="34.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
