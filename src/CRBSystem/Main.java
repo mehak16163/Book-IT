@@ -35,6 +35,15 @@ public class Main extends Application {
 		primarystage.show();
 	}
 
+	public static void showSignUp() throws IOException{
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("signup/SignUpPage.fxml"));
+		mainLayout = loader.load();
+		Scene scene = new Scene(mainLayout);
+		primarystage.setTitle("SignUp");
+		primarystage.setScene(scene);
+		primarystage.show();
+	}
 	public static void main(String[] args) {
 		launch(args);
 	}

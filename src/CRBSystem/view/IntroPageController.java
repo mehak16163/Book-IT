@@ -10,4 +10,8 @@ public class IntroPageController {
 	private void gotoLogin() throws IOException {
 		main.showLogin();
 	}
+	@FXML
+	private void gotoSignUp() throws IOException{
+		main.showSignUp();
+	}
 }

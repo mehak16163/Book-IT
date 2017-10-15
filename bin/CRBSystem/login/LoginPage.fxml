@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="600.0" prefWidth="847.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRBSystem.login.LoginPageController">
    <children>
       <FlowPane prefHeight="89.0" prefWidth="800.0">
          <children>
@@ -25,11 +25,16 @@
       </FlowPane>
       <HBox alignment="CENTER" prefHeight="68.0" prefWidth="800.0">
          <children>
-            <Label alignment="CENTER" prefHeight="75.0" prefWidth="263.0" text="Login" textAlignment="CENTER">
+            <Label alignment="CENTER" prefHeight="75.0" prefWidth="399.0" text="Login" textAlignment="CENTER">
                <font>
                   <Font name="AR ESSENCE" size="57.0" />
                </font>
             </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="39.0" prefWidth="847.0">
+         <children>
+            <Label fx:id="credential" text="Enter Correct Credentials" textFill="RED" visible="false" />
          </children>
       </HBox>
       <HBox id="HBox1" alignment="CENTER" prefHeight="76.0" prefWidth="800.0" spacing="25.0" stylesheets="@../../../stylesheets/Hbox.css">
@@ -42,7 +47,7 @@
                   <Font name="Comic Sans MS" size="36.0" />
                </font>
             </Label>
-            <TextField alignment="CENTER" prefHeight="31.0" prefWidth="274.0" promptText="Enter Name">
+            <TextField fx:id="user_name" alignment="CENTER" prefHeight="31.0" prefWidth="274.0" promptText="Enter Name">
                <HBox.margin>
                   <Insets top="20.0" />
                </HBox.margin>
@@ -50,6 +55,7 @@
                   <Insets left="25.0" />
                </padding>
             </TextField>
+            <Label fx:id="warning_name" text="This field cannot be empty" textFill="RED" visible="false" />
          </children>
       </HBox>
       <HBox id="HBox1" alignment="CENTER" prefHeight="69.0" prefWidth="800.0" spacing="25.0" stylesheets="@../../../stylesheets/Hbox.css">
@@ -62,11 +68,12 @@
                   <Font name="Comic Sans MS" size="31.0" />
                </font>
             </Label>
-            <TextField alignment="CENTER" prefHeight="31.0" prefWidth="278.0" promptText="Enter Email Id">
+            <TextField fx:id="email" alignment="CENTER" prefHeight="31.0" prefWidth="272.0" promptText="Enter Email Id">
                <HBox.margin>
                   <Insets top="20.0" />
                </HBox.margin>
             </TextField>
+            <Label fx:id="warning_email" text="This field cannot be empty" textFill="#ff0404" visible="false" />
          </children>
          <VBox.margin>
             <Insets />
@@ -82,21 +89,22 @@
                   <Font name="Comic Sans MS" size="32.0" />
                </font>
             </Label>
-            <PasswordField alignment="CENTER" prefHeight="31.0" prefWidth="263.0" promptText="Enter Password">
+            <PasswordField fx:id="pass" alignment="CENTER" prefHeight="31.0" prefWidth="268.0" promptText="Enter Password">
                <HBox.margin>
                   <Insets top="15.0" />
                </HBox.margin>
             </PasswordField>
+            <Label fx:id="warning_pass" text="This field cannot be empty" textFill="#ff0404" visible="false" />
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="65.0" prefWidth="800.0" spacing="25.0" stylesheets="@../../../stylesheets/Hbox.css">
+      <HBox id="HBox1" alignment="CENTER" prefHeight="65.0" prefWidth="800.0" spacing="25.0" stylesheets="@../../../stylesheets/Hbox.css">
          <children>
             <Label prefHeight="56.0" prefWidth="152.0" stylesheets="@../../../stylesheets/label_style.css" text="Select Role">
                <font>
                   <Font name="Comic Sans MS" size="27.0" />
                </font>
             </Label>
-            <RadioButton mnemonicParsing="false" prefHeight="40.0" prefWidth="132.0" text="Student">
+            <RadioButton fx:id="isstudent" mnemonicParsing="false" prefHeight="40.0" prefWidth="132.0" text="Student">
                <font>
                   <Font name="Constantia" size="20.0" />
                </font>
@@ -104,26 +112,35 @@
                   <ToggleGroup fx:id="role" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="37.0" prefWidth="131.0" text="Faculty" toggleGroup="$role">
+            <RadioButton fx:id="isfaculty" mnemonicParsing="false" prefHeight="37.0" prefWidth="131.0" text="Faculty" toggleGroup="$role">
                <font>
                   <Font name="Constantia" size="20.0" />
                </font>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" text="Admin" toggleGroup="$role">
+            <RadioButton fx:id="isadmin" mnemonicParsing="false" text="Admin" toggleGroup="$role">
                <font>
                   <Font name="Constantia" size="20.0" />
                </font>
             </RadioButton>
+            <Label fx:id="warning_radio" text="This field cannot be empty" textFill="#ff0404" visible="false" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="75.0" prefWidth="800.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="171.0" style="-fx-font-size: 32px; -fx-font-family: &quot;Comic Sans MS&quot;;" stylesheets="@../../../stylesheets/button.css" text="Login">
+            <Button mnemonicParsing="false" onAction="#loginclicked" prefHeight="60.0" prefWidth="171.0" style="-fx-font-size: 32px; -fx-font-family: &quot;Comic Sans MS&quot;;" stylesheets="@../../../stylesheets/button.css" text="Login">
                <font>
                   <Font name="AR JULIAN" size="36.0" />
                </font>
             </Button>
          </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="77.0" prefWidth="800.0">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#gotoMain" prefHeight="68.0" prefWidth="161.0" style="-fx-font-family: &quot;Comic Sans MS&quot;; -fx-font-size: 28px;" stylesheets="@../../../stylesheets/button.css" text="&lt;&lt;Back" />
+         </children>
+         <padding>
+            <Insets right="50.0" />
+         </padding>
       </HBox>
    </children>
 </VBox>

@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRBSystem.signup.SignUpPageController">
    <children>
-      <HBox prefHeight="83.0" prefWidth="800.0">
+      <HBox prefHeight="65.0" prefWidth="800.0">
          <children>
             <ImageView fitHeight="95.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/App_Name.PNG" />
                </image>
             </ImageView>
-            <ImageView fitHeight="62.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="800.0">
+      <HBox alignment="CENTER" prefHeight="19.0" prefWidth="800.0">
          <children>
             <Label alignment="CENTER" prefHeight="75.0" prefWidth="263.0" text="SignUp" textAlignment="CENTER">
                <font>
@@ -27,7 +27,7 @@
             </Label>
          </children>
       </HBox>
-      <HBox id="HBox1" alignment="CENTER" prefHeight="63.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
+      <HBox id="HBox1" alignment="CENTER" prefHeight="46.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
          <children>
             <Label alignment="CENTER" prefHeight="51.0" prefWidth="313.0" stylesheets="@../../../stylesheets/label_style.css" text="Name">
                <font>
@@ -37,7 +37,7 @@
             <TextField alignment="CENTER" prefHeight="27.0" prefWidth="240.0" promptText="Enter Name" />
          </children>
       </HBox>
-      <HBox id="HBox1" alignment="CENTER" prefHeight="67.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
+      <HBox id="HBox1" alignment="CENTER" prefHeight="44.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
          <children>
             <Label alignment="CENTER" prefHeight="51.0" prefWidth="356.0" stylesheets="@../../../stylesheets/label_style.css" text="User">
                <font>
@@ -59,7 +59,7 @@
             </RadioButton>
          </children>
       </HBox>
-      <HBox id="HBox1" alignment="CENTER" prefHeight="74.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
+      <HBox id="HBox1" alignment="CENTER" prefHeight="56.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="58.0" prefWidth="310.0" stylesheets="@../../../stylesheets/label_style.css" text="Email Id" textAlignment="CENTER">
                <font>
@@ -69,7 +69,7 @@
             <TextField alignment="CENTER" prefHeight="27.0" prefWidth="240.0" promptText="Enter Email-Id" />
          </children>
       </HBox>
-      <HBox id="HBox1" alignment="CENTER" prefHeight="61.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
+      <HBox id="HBox1" alignment="CENTER" prefHeight="51.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
          <children>
             <Label alignment="CENTER" prefHeight="51.0" prefWidth="310.0" stylesheets="@../../../stylesheets/label_style.css" text="Password">
                <font>
@@ -79,7 +79,7 @@
             <PasswordField alignment="CENTER" prefHeight="27.0" prefWidth="240.0" promptText="Enter Password" />
          </children>
       </HBox>
-      <HBox id="HBox1" alignment="CENTER" prefHeight="59.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
+      <HBox id="HBox1" alignment="CENTER" prefHeight="53.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
          <children>
             <Label alignment="CENTER" prefHeight="51.0" prefWidth="306.0" stylesheets="@../../../stylesheets/label_style.css" text="Confirm Password">
                <font>
@@ -89,7 +89,7 @@
             <PasswordField alignment="CENTER" prefHeight="27.0" prefWidth="240.0" promptText="Confirm Password" />
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="83.0" prefWidth="800.0">
+      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="800.0">
          <children>
             <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="168.0" style="-fx-font-size: 32px; -fx-font-family: &quot;Comic Sans MS&quot;;" stylesheets="@../../../stylesheets/button.css" text="Submit">
                <font>
@@ -97,6 +97,14 @@
                </font>
             </Button>
          </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="59.0" prefWidth="800.0">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#gotoMain" prefHeight="68.0" prefWidth="161.0" style="-fx-font-family: &quot;Comic Sans MS&quot;; -fx-font-size: 28px;" stylesheets="@../../../stylesheets/button.css" text="&lt;&lt;Back" />
+         </children>
+         <padding>
+            <Insets left="25.0" right="50.0" />
+         </padding>
       </HBox>
    </children>
 </VBox>

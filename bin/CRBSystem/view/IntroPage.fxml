@@ -33,7 +33,7 @@
                <effect>
                   <DropShadow />
                </effect></Button>
-                  <Button mnemonicParsing="false" prefHeight="77.0" prefWidth="204.0" style="-fx-font-size: 30;" stylesheets="@../../../stylesheets/button.css" text="SignUp&gt;&gt;">
+                  <Button mnemonicParsing="false" onAction="#gotoSignUp" prefHeight="77.0" prefWidth="204.0" style="-fx-font-size: 30;" stylesheets="@../../../stylesheets/button.css" text="SignUp&gt;&gt;">
                <font>
                   <Font name="Comic Sans MS Bold" size="33.0" />
                </font>
