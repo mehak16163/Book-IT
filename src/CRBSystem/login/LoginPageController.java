@@ -12,7 +12,7 @@ import javafx.scene.control.*;
 
 public class LoginPageController {
 	
-	private Main main;
+	//private Main main;
 	@FXML
 	private TextField user_name;
 	@FXML 
@@ -37,7 +37,7 @@ public class LoginPageController {
 	private Label warning_radio;
 	@FXML
 	private void gotoMain() throws IOException {
-		main.showMainPage();
+		Main.showMainPage();
 	}
 	@FXML
 	private void loginclicked() {

@@ -5,9 +5,9 @@ import javafx.fxml.FXML;
 
 
 public class SignUpPageController {
-	private Main main;
+	//private Main main;
 	@FXML
 	private void gotoMain() throws IOException {
-		main.showMainPage();
+		Main.showMainPage();
 	}
 }
