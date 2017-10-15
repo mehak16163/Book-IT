@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="15.0" style="-fx-background-color: white;" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS" GridPane.rowSpan="2" GridPane.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="15.0" style="-fx-background-color: white;" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS" GridPane.rowSpan="2" GridPane.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRBSystem.view.IntroPageController">
          <children>
             <ImageView fitHeight="195.0" fitWidth="513.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -26,7 +26,7 @@
             </ImageView>
             <HBox alignment="CENTER" prefHeight="169.0" prefWidth="800.0" spacing="60.0" VBox.vgrow="ALWAYS">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="206.0" style="-fx-font-size: 35;" stylesheets="@../../../stylesheets/button.css" text="Login&gt;&gt;">
+                  <Button mnemonicParsing="false" onAction="#gotoLogin" prefHeight="80.0" prefWidth="206.0" style="-fx-font-size: 35;" stylesheets="@../../../stylesheets/button.css" text="Login&gt;&gt;">
                <font>
                   <Font name="Comic Sans MS Bold" size="39.0" />
                </font>

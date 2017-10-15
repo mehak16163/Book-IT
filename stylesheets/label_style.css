@@ -1,5 +1,10 @@
-.label {
-	
-	font-weight : bold;
+.label{
+	-fx-background-color : white;
+	-fx-background-radius : 22;
+	-fx-text-fill: black;
+}
 
+.label:hover{
+	-fx-background-color : #50D5E0;
+	-fx-text-fill:white;
 }
