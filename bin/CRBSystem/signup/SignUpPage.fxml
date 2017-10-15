@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="83.0" prefWidth="800.0">
+         <children>
+            <ImageView fitHeight="95.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/App_Name.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="62.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="800.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="75.0" prefWidth="263.0" text="SignUp" textAlignment="CENTER">
+               <font>
+                  <Font name="AR ESSENCE" size="57.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox id="HBox1" alignment="CENTER" prefHeight="63.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
+         <children>
+            <Label alignment="CENTER" prefHeight="51.0" prefWidth="313.0" stylesheets="@../../../stylesheets/label_style.css" text="Name">
+               <font>
+                  <Font name="Comic Sans MS" size="36.0" />
+               </font>
+            </Label>
+            <TextField alignment="CENTER" prefHeight="27.0" prefWidth="240.0" promptText="Enter Name" />
+         </children>
+      </HBox>
+      <HBox id="HBox1" alignment="CENTER" prefHeight="67.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
+         <children>
+            <Label alignment="CENTER" prefHeight="51.0" prefWidth="356.0" stylesheets="@../../../stylesheets/label_style.css" text="User">
+               <font>
+                  <Font name="Comic Sans MS" size="35.0" />
+               </font>
+            </Label>
+            <RadioButton alignment="BOTTOM_LEFT" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="29.0" prefWidth="133.0" text="Student" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="Constantia" size="21.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="user" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" prefHeight="24.0" prefWidth="133.0" text="Faculty" toggleGroup="$user">
+               <font>
+                  <Font name="Comic Sans MS" size="21.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox id="HBox1" alignment="CENTER" prefHeight="74.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="58.0" prefWidth="310.0" stylesheets="@../../../stylesheets/label_style.css" text="Email Id" textAlignment="CENTER">
+               <font>
+                  <Font name="Comic Sans MS" size="35.0" />
+               </font>
+            </Label>
+            <TextField alignment="CENTER" prefHeight="27.0" prefWidth="240.0" promptText="Enter Email-Id" />
+         </children>
+      </HBox>
+      <HBox id="HBox1" alignment="CENTER" prefHeight="61.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
+         <children>
+            <Label alignment="CENTER" prefHeight="51.0" prefWidth="310.0" stylesheets="@../../../stylesheets/label_style.css" text="Password">
+               <font>
+                  <Font name="Comic Sans MS" size="35.0" />
+               </font>
+            </Label>
+            <PasswordField alignment="CENTER" prefHeight="27.0" prefWidth="240.0" promptText="Enter Password" />
+         </children>
+      </HBox>
+      <HBox id="HBox1" alignment="CENTER" prefHeight="59.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
+         <children>
+            <Label alignment="CENTER" prefHeight="51.0" prefWidth="306.0" stylesheets="@../../../stylesheets/label_style.css" text="Confirm Password">
+               <font>
+                  <Font name="Comic Sans MS" size="32.0" />
+               </font>
+            </Label>
+            <PasswordField alignment="CENTER" prefHeight="27.0" prefWidth="240.0" promptText="Confirm Password" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="83.0" prefWidth="800.0">
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="168.0" style="-fx-font-size: 32px; -fx-font-family: &quot;Comic Sans MS&quot;;" stylesheets="@../../../stylesheets/button.css" text="Submit">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
