@@ -8,4 +8,8 @@ public class Timetable implements Serializable {
 	public Timetable(Boolean[][] ta) {
 		table = ta;
 	}
+	
+	public void viewTable() {
+		
+	}
 }

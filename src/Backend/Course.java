@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.util.HashMap;
 
 public class Course implements Serializable {
+	private String nature;
+	private String acro;
+	private String code;
 	private Timetable time;
 	private Room[] rooms = new Room[6];
 	private Faculty fac;
@@ -13,9 +16,12 @@ public class Course implements Serializable {
 	private static int post_count =0;
 	private HashMap<Integer , String> post = new HashMap<>();
 	
-	public Course(Timetable t , Room[] r , Faculty f ) {
+	public Course(String n , String a,String c ,Timetable t , Room[] r , Faculty f ) {
+		code =c;
 		time = t;
 		rooms = r;
 		fac =f;
+		nature =n;
+		acro =a;
 	}
 }

@@ -1,4 +1,5 @@
 package CRBSystem.login;
+import Backend.Student;
 
 import java.io.IOException;
 
@@ -40,7 +41,7 @@ public class LoginPageController {
 		Main.showMainPage();
 	}
 	@FXML
-	private void loginclicked() {
+	private void loginclicked() throws IOException {
 		boolean check=true;
 		credential.setVisible(false);
 		warning_name.setVisible(false);
@@ -71,14 +72,14 @@ public class LoginPageController {
 			if (isstudent.isSelected()) {
 				Student temp = new Student(user_name.getText(), email.getText(), pass.getText());
 				check = ApplicationData.checkStudent(temp);
-				if (!check) {
+				Main.showStudentIntro( temp);
+				/*if (!check) {
 					credential.setVisible(true);
 					return;
 				}
 				else {
-					//do whatever it will do on login
-				}
-			}
+					//go to student login page 
+				}	*/		}
 			if (isadmin.isSelected()) {
 				Admin temp = new Admin(user_name.getText(), email.getText(), pass.getText());
 				check = ApplicationData.checkAdmin(temp);
@@ -87,7 +88,7 @@ public class LoginPageController {
 					return;
 				}
 				else {
-					//do whatever it will do on login
+					//go to admin login page
 				}
 			}
 			if (isfaculty.isSelected()) {
@@ -98,7 +99,7 @@ public class LoginPageController {
 					return;
 				}
 				else {
-					//do whatever it will do on login
+					//go to faculty page
 				}
 			}
 		}
