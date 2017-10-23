@@ -3,9 +3,11 @@ package CRBSystem;
 import java.io.IOException;
 
 import Backend.Admin;
+import Backend.Faculty;
 import Backend.Student;
 import Backend.User;
 import CRBSystem.Admin_Intro.Admin_IntroController;
+import CRBSystem.FacultyIntro.Faculty_IntroController;
 import CRBSystem.student_intro.Student_IntroController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -96,6 +98,17 @@ public class Main extends Application {
 		controller.setScreen(curr);
 		primarystage.show();
 	}
-	
+	public static void showFacultyIntro(Faculty t) throws IOException  {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("FacultyIntro/FacultyIntro.fxml"));
+		mainLayout = loader.load();
+		curr = t;
+		Scene scene = new Scene(mainLayout);
+		primarystage.setTitle("Faculty DashBoard");
+		primarystage.setScene(scene);
+		Faculty_IntroController controller = loader.<Faculty_IntroController>getController();
+		controller.setScreen(curr);
+		primarystage.show();
+	}
 	
 }

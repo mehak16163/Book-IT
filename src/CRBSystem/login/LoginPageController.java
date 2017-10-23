@@ -82,13 +82,7 @@ public class LoginPageController {
 			if (isfaculty.isSelected()) {
 				Faculty temp = new Faculty(user_name.getText(), email.getText(), pass.getText());
 				check = ApplicationData.checkFaculty(temp);
-				if (!check) {
-					credential.setVisible(true);
-					return;
-				}
-				else {
-					//go to faculty page
-				}
+				Main.showFacultyIntro(temp);
 			}
 		}
 	}
