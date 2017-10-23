@@ -91,7 +91,7 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="70.0" prefWidth="800.0">
          <children>
-            <Button alignment="CENTER" mnemonicParsing="false" prefHeight="60.0" prefWidth="168.0" style="-fx-font-size: 32px; -fx-font-family: &quot;Comic Sans MS&quot;;" stylesheets="@../../../stylesheets/button.css" text="Submit">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#gotoNext" prefHeight="60.0" prefWidth="168.0" style="-fx-font-size: 32px; -fx-font-family: &quot;Comic Sans MS&quot;;" stylesheets="@../../../stylesheets/button.css" text="Submit">
                <font>
                   <Font name="Comic Sans MS Bold" size="18.0" />
                </font>

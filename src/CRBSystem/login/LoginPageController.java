@@ -73,23 +73,11 @@ public class LoginPageController {
 				Student temp = new Student(user_name.getText(), email.getText(), pass.getText());
 				check = ApplicationData.checkStudent(temp);
 				Main.showStudentIntro( temp);
-				/*if (!check) {
-					credential.setVisible(true);
-					return;
-				}
-				else {
-					//go to student login page 
-				}	*/		}
+					}
 			if (isadmin.isSelected()) {
 				Admin temp = new Admin(user_name.getText(), email.getText(), pass.getText());
 				check = ApplicationData.checkAdmin(temp);
-				if (!check) {
-					credential.setVisible(true);
-					return;
-				}
-				else {
-					//go to admin login page
-				}
+				Main.showAdminIntro(temp);
 			}
 			if (isfaculty.isSelected()) {
 				Faculty temp = new Faculty(user_name.getText(), email.getText(), pass.getText());

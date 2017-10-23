@@ -2,8 +2,10 @@ package CRBSystem;
 
 import java.io.IOException;
 
+import Backend.Admin;
 import Backend.Student;
 import Backend.User;
+import CRBSystem.Admin_Intro.Admin_IntroController;
 import CRBSystem.student_intro.Student_IntroController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -70,6 +72,29 @@ public class Main extends Application {
 	public static User getCurr() {
 		//System.out.println(curr.getName());
 		return curr;
+	}
+	
+	public static void gotoSignUp_2() throws IOException{
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("signup/SignUp_2.fxml"));
+		mainLayout = loader.load();
+		Scene scene = new Scene(mainLayout);
+		primarystage.setTitle("Request sent to Admin");
+		primarystage.setScene(scene);
+		primarystage.show();
+	}
+	
+	public static void showAdminIntro(Admin t) throws IOException  {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("Admin_Intro/Admin_Intro.fxml"));
+		mainLayout = loader.load();
+		curr = t;
+		Scene scene = new Scene(mainLayout);
+		primarystage.setTitle("Admin DashBoard");
+		primarystage.setScene(scene);
+		Admin_IntroController controller = loader.<Admin_IntroController>getController();
+		controller.setScreen(curr);
+		primarystage.show();
 	}
 	
 	

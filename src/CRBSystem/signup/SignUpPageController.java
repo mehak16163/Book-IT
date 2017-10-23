@@ -10,4 +10,8 @@ public class SignUpPageController {
 	private void gotoMain() throws IOException {
 		Main.showMainPage();
 	}
+	@FXML
+	private void gotoNext() throws IOException {
+		Main.gotoSignUp_2();
+	}
 }
