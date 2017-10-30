@@ -11,7 +11,7 @@ import java.io.ObjectOutputStream;
 import java.util.HashMap;
 
 public class Faculty extends User implements Comparable{
-	private Timetable f_table;
+	private Timetable f_table=null;
 	private HashMap<String , Course> courses = new HashMap<>();
 	public Faculty(String n ,String e ,String p) {
 		super(n,e,p);

@@ -27,6 +27,11 @@
             </Label>
          </children>
       </HBox>
+      <HBox alignment="CENTER" prefHeight="32.0" prefWidth="800.0">
+         <children>
+            <Label fx:id="warning" prefHeight="21.0" prefWidth="175.0" text="Passwords do not match" textFill="#f50909" visible="false" />
+         </children>
+      </HBox>
       <HBox id="HBox1" alignment="CENTER" prefHeight="46.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
          <children>
             <Label alignment="CENTER" prefHeight="51.0" prefWidth="313.0" stylesheets="@../../../stylesheets/label_style.css" text="Name">
@@ -34,7 +39,7 @@
                   <Font name="Comic Sans MS" size="36.0" />
                </font>
             </Label>
-            <TextField alignment="CENTER" prefHeight="27.0" prefWidth="240.0" promptText="Enter Name" />
+            <TextField fx:id="name" alignment="CENTER" prefHeight="27.0" prefWidth="240.0" promptText="Enter Name" />
          </children>
       </HBox>
       <HBox id="HBox1" alignment="CENTER" prefHeight="44.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
@@ -44,7 +49,7 @@
                   <Font name="Comic Sans MS" size="35.0" />
                </font>
             </Label>
-            <RadioButton alignment="BOTTOM_LEFT" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="29.0" prefWidth="133.0" text="Student" textAlignment="JUSTIFY">
+            <RadioButton fx:id="student" alignment="BOTTOM_LEFT" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="29.0" prefWidth="133.0" text="Student" textAlignment="JUSTIFY">
                <font>
                   <Font name="Constantia" size="21.0" />
                </font>
@@ -52,7 +57,7 @@
                   <ToggleGroup fx:id="user" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" prefHeight="24.0" prefWidth="133.0" text="Faculty" toggleGroup="$user">
+            <RadioButton fx:id="faculty" mnemonicParsing="false" prefHeight="24.0" prefWidth="133.0" text="Faculty" toggleGroup="$user">
                <font>
                   <Font name="Comic Sans MS" size="21.0" />
                </font>
@@ -66,7 +71,7 @@
                   <Font name="Comic Sans MS" size="35.0" />
                </font>
             </Label>
-            <TextField alignment="CENTER" prefHeight="27.0" prefWidth="240.0" promptText="Enter Email-Id" />
+            <TextField fx:id="email" alignment="CENTER" prefHeight="27.0" prefWidth="240.0" promptText="Enter Email-Id" />
          </children>
       </HBox>
       <HBox id="HBox1" alignment="CENTER" prefHeight="51.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
@@ -76,7 +81,7 @@
                   <Font name="Comic Sans MS" size="35.0" />
                </font>
             </Label>
-            <PasswordField alignment="CENTER" prefHeight="27.0" prefWidth="240.0" promptText="Enter Password" />
+            <PasswordField fx:id="pass" alignment="CENTER" prefHeight="27.0" prefWidth="240.0" promptText="Enter Password" />
          </children>
       </HBox>
       <HBox id="HBox1" alignment="CENTER" prefHeight="53.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
@@ -86,7 +91,7 @@
                   <Font name="Comic Sans MS" size="32.0" />
                </font>
             </Label>
-            <PasswordField alignment="CENTER" prefHeight="27.0" prefWidth="240.0" promptText="Confirm Password" />
+            <PasswordField fx:id="repass" alignment="CENTER" prefHeight="27.0" prefWidth="240.0" promptText="Confirm Password" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="70.0" prefWidth="800.0">
