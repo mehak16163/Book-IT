@@ -41,7 +41,7 @@ public class LoginPageController {
 		Main.showMainPage();
 	}
 	@FXML
-	private void loginclicked() throws IOException, ClassNotFoundException {
+	private void loginclicked() throws IOException {
 		boolean check=true;
 		credential.setVisible(false);
 		warning_name.setVisible(false);
@@ -72,29 +72,35 @@ public class LoginPageController {
 			if (isstudent.isSelected()) {
 				Student temp = new Student(user_name.getText(), email.getText(), pass.getText());
 				check = ApplicationData.checkStudent(temp);
-				if (check) {
-					Main.showStudentIntro( temp);
-
+				Main.showStudentIntro( temp);
+				/*if (!check) {
+					credential.setVisible(true);
+					return;
 				}
 				else {
-					credential.setVisible(true);
-				}
-					}
-			else if (isadmin.isSelected()) {
+					//go to student login page 
+				}	*/		}
+			if (isadmin.isSelected()) {
 				Admin temp = new Admin(user_name.getText(), email.getText(), pass.getText());
 				check = ApplicationData.checkAdmin(temp);
-				if (check)
-					Main.showAdminIntro(temp);
-				else
+				if (!check) {
 					credential.setVisible(true);
+					return;
+				}
+				else {
+					//go to admin login page
+				}
 			}
-			else if (isfaculty.isSelected()) {
+			if (isfaculty.isSelected()) {
 				Faculty temp = new Faculty(user_name.getText(), email.getText(), pass.getText());
 				check = ApplicationData.checkFaculty(temp);
-				if (check)
-					Main.showFacultyIntro(temp);
-				else
+				if (!check) {
 					credential.setVisible(true);
+					return;
+				}
+				else {
+					//go to faculty page
+				}
 			}
 		}
 	}

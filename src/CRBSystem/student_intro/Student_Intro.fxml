@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<VBox fx:id="vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRBSystem.FacultyIntro.Faculty_IntroController">
+<VBox fx:id="vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRBSystem.student_intro.Student_IntroController">
    <children>
       <HBox prefHeight="87.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
          <children>
@@ -27,7 +27,7 @@
                               <Font size="22.0" />
                            </font>
                         </Label>
-                        <Label fx:id="name" prefHeight="30.0" prefWidth="197.0" text="Name " />
+                        <Label fx:id="name" prefHeight="30.0" prefWidth="197.0" />
                      </children>
                   </HBox>
                   <HBox alignment="TOP_RIGHT" prefHeight="33.0" prefWidth="549.0" spacing="20.0">
@@ -37,7 +37,7 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="email" prefHeight="27.0" prefWidth="197.0" text="EmailId" />
+                        <Label fx:id="email" prefHeight="27.0" prefWidth="197.0" />
                      </children>
                   </HBox>
                </children>
@@ -84,7 +84,7 @@
                         <DropShadow />
                      </effect>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="64.0" prefWidth="254.0" style="-fx-font-size: 24;" stylesheets="@../../../stylesheets/button.css" text="Book a Room" GridPane.columnIndex="1">
+                  <Button mnemonicParsing="false" onAction="#setScreen" prefHeight="64.0" prefWidth="254.0" style="-fx-font-size: 24;" stylesheets="@../../../stylesheets/button.css" text="Request Booking" GridPane.columnIndex="1">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -100,7 +100,7 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
          <children>
-            <Button mnemonicParsing="false" onAction="#logout" prefHeight="65.0" prefWidth="194.0" style="-fx-font-size: 28;" stylesheets="@../../../stylesheets/button.css" text="Logout">
+            <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="194.0" style="-fx-font-size: 28;" stylesheets="@../../../stylesheets/button.css" text="Logout">
                <effect>
                   <DropShadow />
                </effect>

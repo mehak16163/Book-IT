@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<VBox fx:id="vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRBSystem.FacultyIntro.Faculty_IntroController">
+<VBox fx:id="vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRBSystem.student_intro.Student_IntroController">
    <children>
       <HBox prefHeight="87.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
          <children>
@@ -84,7 +84,7 @@
                         <DropShadow />
                      </effect>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="64.0" prefWidth="254.0" style="-fx-font-size: 24;" stylesheets="@../../../stylesheets/button.css" text="Book a Room" GridPane.columnIndex="1">
+                  <Button mnemonicParsing="false" prefHeight="64.0" prefWidth="254.0" style="-fx-font-size: 24;" stylesheets="@../../../stylesheets/button.css" text="Request Booking" GridPane.columnIndex="1">
                      <effect>
                         <DropShadow />
                      </effect>

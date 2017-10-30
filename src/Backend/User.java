@@ -1,5 +1,7 @@
 package Backend;
 
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 public class User implements Serializable {
@@ -17,5 +19,6 @@ public class User implements Serializable {
 		email = em;
 		password = p;
 	}
+	
 	
 }
