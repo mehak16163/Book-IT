@@ -19,13 +19,16 @@ public class Request implements Serializable {
 	private Boolean accepted = false;
 	private Boolean valid ;
 	private Room room;
+	private String time;
 	Date date;
-	public Request(Student s , String p , String r ,int c,  Date d) {
+	public Request(Student s , String p , String r ,int c,  Date d , String t) {
 		student =s;
 		purpose = p;
 		roomname = r;
 		capacity =c;
 		date =d;
+		time =t;
+		counter++;
 	}
 	
 	public void serialise() throws FileNotFoundException, IOException {

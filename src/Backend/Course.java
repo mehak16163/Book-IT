@@ -25,12 +25,12 @@ public class Course implements Serializable {
 	
 	public Course(String na,String n , String a,String c ,Timetable t , Room[] r , Faculty f ) {
 		code =c;
-		time = t;
-		rooms = r;
 		fac =f;
-		nature =n;
 		acro =a;
 		name = na;
+		time = t;
+		rooms = r;
+		nature =n;
 	}
 	
 	public void serialise() throws FileNotFoundException, IOException {
@@ -57,6 +57,9 @@ public class Course implements Serializable {
 			in.close();
 			}
 		return s1;
+	}
+	public static void main(String[] args) {
+		
 	}
 
 }

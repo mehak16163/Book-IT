@@ -73,7 +73,8 @@ public class LoginPageController {
 				Student temp = new Student(user_name.getText(), email.getText(), pass.getText());
 				check = ApplicationData.checkStudent(temp);
 				if (check) {
-					Main.showStudentIntro( temp);
+					Main.setCurr(temp);
+					Main.showStudentIntro();
 
 				}
 				else {
@@ -83,16 +84,18 @@ public class LoginPageController {
 			else if (isadmin.isSelected()) {
 				Admin temp = new Admin(user_name.getText(), email.getText(), pass.getText());
 				check = ApplicationData.checkAdmin(temp);
-				if (check)
-					Main.showAdminIntro(temp);
+				if (check) {
+					Main.setCurr(temp);
+					Main.showAdminIntro();}
 				else
 					credential.setVisible(true);
 			}
 			else if (isfaculty.isSelected()) {
 				Faculty temp = new Faculty(user_name.getText(), email.getText(), pass.getText());
 				check = ApplicationData.checkFaculty(temp);
-				if (check)
-					Main.showFacultyIntro(temp);
+				if (check) {
+					Main.setCurr(temp);
+					Main.showFacultyIntro();}
 				else
 					credential.setVisible(true);
 			}

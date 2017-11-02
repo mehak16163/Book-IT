@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
 	private static Stage primarystage;
 	private static VBox mainLayout;
-	static User curr = null;
+	private static User curr = null;
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		primarystage = primaryStage;
@@ -26,7 +26,7 @@ public class Main extends Application {
 		showMainPage();
 	}
 	public static void showMainPage() throws IOException {
-		curr=null;
+		setCurr(null);
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("view/IntroPage.fxml"));
 		mainLayout = loader.load();
@@ -44,16 +44,16 @@ public class Main extends Application {
 		primarystage.setScene(scene);
 		primarystage.show();
 	}
-	public static void showStudentIntro(Student t) throws IOException  {
+	public static void showStudentIntro() throws IOException  {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("student_intro/StudentIntro.fxml"));
 		mainLayout = loader.load();
-		curr = t;
+		//curr = t;
 		Scene scene = new Scene(mainLayout);
 		primarystage.setTitle("Student DashBoard");
 		primarystage.setScene(scene);
 		Student_IntroController controller = loader.<Student_IntroController>getController();
-		controller.setScreen(curr);
+		controller.setScreen(getCurr());
 		primarystage.show();
 	}
 
@@ -86,29 +86,32 @@ public class Main extends Application {
 		primarystage.show();
 	}
 	
-	public static void showAdminIntro(Admin t) throws IOException  {
+	public static void showAdminIntro() throws IOException  {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("Admin_Intro/Admin_Intro.fxml"));
 		mainLayout = loader.load();
-		curr = t;
+		//setCurr(t);
 		Scene scene = new Scene(mainLayout);
 		primarystage.setTitle("Admin DashBoard");
 		primarystage.setScene(scene);
 		Admin_IntroController controller = loader.<Admin_IntroController>getController();
-		controller.setScreen(curr);
+		controller.setScreen(getCurr());
 		primarystage.show();
 	}
-	public static void showFacultyIntro(Faculty t) throws IOException  {
+	public static void showFacultyIntro() throws IOException  {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("FacultyIntro/FacultyIntro.fxml"));
 		mainLayout = loader.load();
-		curr = t;
+		//setCurr(t);
 		Scene scene = new Scene(mainLayout);
 		primarystage.setTitle("Faculty DashBoard");
 		primarystage.setScene(scene);
 		Faculty_IntroController controller = loader.<Faculty_IntroController>getController();
-		controller.setScreen(curr);
+		controller.setScreen(getCurr());
 		primarystage.show();
+	}
+	public static void setCurr(User curr) {
+		Main.curr = curr;
 	}
 	
 }

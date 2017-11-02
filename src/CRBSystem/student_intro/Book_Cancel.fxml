@@ -7,10 +7,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <FlowPane prefHeight="156.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
+      <FlowPane prefHeight="156.0" prefWidth="800.0">
          <children>
             <ImageView fitHeight="91.0" fitWidth="227.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -22,14 +21,24 @@
             </ImageView>
          </children>
       </FlowPane>
-      <HBox alignment="CENTER" prefHeight="222.0" prefWidth="800.0">
+      <HBox alignment="CENTER" prefHeight="115.0" prefWidth="800.0">
+         <children>
+            <Button mnemonicParsing="false" stylesheets="@../../../stylesheets/button.css" text="View Bookings" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="85.0" prefWidth="800.0">
          <children>
             <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="421.0" stylesheets="@../../../stylesheets/button.css" text="Cancel Previous Booking" />
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="321.0" prefWidth="800.0" spacing="100.0" VBox.vgrow="ALWAYS">
+      <HBox alignment="CENTER" prefHeight="104.0" prefWidth="800.0" spacing="100.0">
          <children>
             <Button mnemonicParsing="false" stylesheets="@../../../stylesheets/button.css" text="Request New Booking" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="88.0" prefWidth="800.0">
+         <children>
+            <Button mnemonicParsing="false" stylesheets="@../../../stylesheets/button.css" text="&lt;&lt;Back" />
          </children>
       </HBox>
    </children>

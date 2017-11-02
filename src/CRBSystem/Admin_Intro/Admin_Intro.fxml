@@ -64,9 +64,14 @@
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="810.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="810.0" spacing="25.0">
                <children>
                   <Button mnemonicParsing="false" prefHeight="64.0" prefWidth="260.0" style="-fx-font-size: 23;" stylesheets="@../../../stylesheets/button.css" text="Respond to Request">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="68.0" prefWidth="309.0" style="-fx-font-size: 25px;" stylesheets="@../../../stylesheets/button.css" text="View SignUp Requests">
                      <effect>
                         <DropShadow />
                      </effect>

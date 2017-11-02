@@ -69,4 +69,16 @@ public class Student extends User implements Comparable {
 	public static void main(String[] args) throws IOException {
 		
 	}
+	public HashMap<Integer , Request > getRequests() {
+		return requests;
+	}
+	public void setRequests(HashMap<Integer , Request > requests) {
+		this.requests = requests;
+	}
+	public HashMap<String , Course > getCourses() {
+		return courses;
+	}
+	public void setCourses(HashMap<String , Course > courses) {
+		this.courses = courses;
+	}
 }
