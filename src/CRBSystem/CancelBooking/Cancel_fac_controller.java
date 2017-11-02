@@ -11,7 +11,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class Cancel_controller {
+public class Cancel_fac_controller {
 	@FXML 
 	private Label result;
 	@FXML
@@ -22,7 +22,7 @@ public class Cancel_controller {
 	private Label warning;
    @FXML
    public void goBack() throws IOException {
-	  Main.showStudentIntro();
+	  Main.showFacultyIntro();
    }
    
    public void cancel() throws FileNotFoundException, ClassNotFoundException, IOException {

@@ -114,4 +114,25 @@ public class Main extends Application {
 		Main.curr = curr;
 	}
 	
+	public static void showCancelStudent() throws IOException {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("CancelBooking/Cancel.fxml"));
+		mainLayout = loader.load();
+		//setCurr(t);
+		Scene scene = new Scene(mainLayout);
+		primarystage.setTitle("Cancel Booking");
+		primarystage.setScene(scene);
+		primarystage.show();
+	}
+	
+	public static void showBookStudent() throws IOException {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("student_intro/BookRoom.fxml"));
+		mainLayout = loader.load();
+		//setCurr(t);
+		Scene scene = new Scene(mainLayout);
+		primarystage.setTitle("Room Booking");
+		primarystage.setScene(scene);
+		primarystage.show();
+	}
 }

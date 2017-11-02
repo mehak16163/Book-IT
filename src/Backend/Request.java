@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Request implements Serializable {
+public class Request implements Serializable , Comparable {
 	static int counter =1;
 	private final int id=counter;
 	private Student student;
@@ -79,6 +79,14 @@ public class Request implements Serializable {
 	}
 	public Date getDate() {
 		return date;
+	}
+
+	@Override
+	public int compareTo(Object a) {
+		Request req = (Request)a;
+		if (req.id == this.id)
+			return 1;
+		return 0;
 	}
 	
 	

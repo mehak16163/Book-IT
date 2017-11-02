@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRBSystem.student_intro.Book_Cancel_Controller">
    <children>
       <FlowPane prefHeight="156.0" prefWidth="800.0">
          <children>
@@ -28,17 +28,17 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="85.0" prefWidth="800.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="421.0" stylesheets="@../../../stylesheets/button.css" text="Cancel Previous Booking" />
+            <Button mnemonicParsing="false" onAction="#gotocancel" prefHeight="55.0" prefWidth="421.0" stylesheets="@../../../stylesheets/button.css" text="Cancel Previous Booking" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="104.0" prefWidth="800.0" spacing="100.0">
          <children>
-            <Button mnemonicParsing="false" stylesheets="@../../../stylesheets/button.css" text="Request New Booking" />
+            <Button mnemonicParsing="false" onAction="#gotoBook" stylesheets="@../../../stylesheets/button.css" text="Request New Booking" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="88.0" prefWidth="800.0">
          <children>
-            <Button mnemonicParsing="false" stylesheets="@../../../stylesheets/button.css" text="&lt;&lt;Back" />
+            <Button mnemonicParsing="false" onAction="#goBack" stylesheets="@../../../stylesheets/button.css" text="&lt;&lt;Back" />
          </children>
       </HBox>
    </children>
