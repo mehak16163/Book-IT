@@ -1,3 +1,4 @@
+Mandatory/Elective,Course_name,Course_Number,Instructor,Credits,Acronym,Monday_class,Tuesday_class,Wednesday_class,Thursday_class,Friday_class,Monday_tut,Tuesday_tut,Wednesday_tut,Thursday_tut,Friday_tut,Monday_lab,Tuesday_lab,Wednesday_lab,Thursday_lab,Friday_lab
 Mandatory,Discrete Mathematics,CSE121,Donghoon Chang,4,DM,-,1:30-3:00$c21,-,-,11:30-1:00$c21,-,-,4:00-5:30$s01,-,4:00-5:30$lr1$lr2$lr3,-,-,-,-,-
 Mandatory,Advanced Progrmming,CSE201,Vivek Kumar,4,AP,11:00-12:00$c21,-,11:00-12:00$c21,11:00-12:00$c21,-,12:00-1:00$lr1$lr2$s01$s02,-,-,-,-,-,-,-,12:00-1:00$l21$l22$l23,-
 Mandatory,Computer Organization,CSE112,Naveen Prakash(G),4,CO,-,-,2:30-4:00$c21,4:00-5:30$c01,-,-,-,1:30-2:30$lr2$lr3$c22$c23,-,-,-,-,-,-,-
