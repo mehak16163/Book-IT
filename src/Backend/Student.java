@@ -11,7 +11,7 @@ import java.io.ObjectOutputStream;
 import java.util.HashMap;
 
 public class Student extends User implements Comparable {
-	private Timetable s_table = null ;
+	private Timetable s_table = new Timetable(new Boolean[6][20]) ;
 	static int num_course =0;
 	private HashMap<Integer , Request > requests = new HashMap<>();
 	private HashMap<String , Course > courses = new HashMap<>();
@@ -67,17 +67,6 @@ public class Student extends User implements Comparable {
 	
 	
 	public static void main(String[] args) throws IOException {
-		BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
-		ObjectOutputStream out=null ;
-		String name = rd.readLine();
-		String email = rd.readLine();
-		String pass = rd.readLine();
-		//File f = new File("./src/Database/"+name+".txt");
-		Boolean[][] t = new Boolean[6][90] ;
-		Timetable table = new Timetable(t);
-		Student s = new Student(name , email , pass ,table );
-		out  = new ObjectOutputStream(new FileOutputStream("./src/Database/students/"+name+".txt"));
-		out.writeObject(s);
-		out.close();
+		
 	}
 }
