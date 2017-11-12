@@ -36,6 +36,9 @@ public class SignUpPageController {
 		if (!pass.getText().equals(repass.getText())){
 			warning.setVisible(true);
 		}
+		else if (!email.getText().contains("iiitd.ac.in")) {
+			warning.setVisible(true);
+		}
 		else {
 			String type;
 			if (student.isSelected()) {

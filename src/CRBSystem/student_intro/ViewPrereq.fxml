@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox prefHeight="87.0" prefWidth="800.0">
@@ -46,7 +45,7 @@
                      </font>
                   </Label>
                   <TextField promptText="Course ID" GridPane.columnIndex="1" />
-                  <Label prefHeight="21.0" prefWidth="263.0" text="Enter Course Name" GridPane.rowIndex="1">
+                  <Label prefHeight="47.0" prefWidth="300.0" text="Enter Course Name" GridPane.rowIndex="1">
                      <font>
                         <Font name="AR CENA" size="32.0" />
                      </font>

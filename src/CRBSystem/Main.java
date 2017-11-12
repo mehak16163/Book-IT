@@ -44,6 +44,43 @@ public class Main extends Application {
 		primarystage.setScene(scene);
 		primarystage.show();
 	}
+	
+	public static void showTimeTable() throws IOException {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("viewTable/TimeTable.fxml"));
+		mainLayout = loader.load();
+		Scene scene = new Scene(mainLayout);
+		primarystage.setTitle("TimeTable");
+		primarystage.setScene(scene);
+		primarystage.show();
+	}
+	public static void showPreReq() throws IOException {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("student_intro/ViewPrereq.fxml"));
+		mainLayout = loader.load();
+		Scene scene = new Scene(mainLayout);
+		primarystage.setTitle("View Prerequisites");
+		primarystage.setScene(scene);
+		primarystage.show();
+	}
+	public static void showSearchCourses() throws IOException {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("student_intro/Search_Courses"));
+		mainLayout = loader.load();
+		Scene scene = new Scene(mainLayout);
+		primarystage.setTitle("TimeTable");
+		primarystage.setScene(scene);
+		primarystage.show();
+	}
+	public static void book_cancel() throws IOException {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("student_intro/Book_Cancel.fxml"));
+		mainLayout = loader.load();
+		Scene scene = new Scene(mainLayout);
+		primarystage.setTitle("Book/Cancel Bookings");
+		primarystage.setScene(scene);
+		primarystage.show();
+	}
 	public static void showStudentIntro() throws IOException  {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("student_intro/StudentIntro.fxml"));

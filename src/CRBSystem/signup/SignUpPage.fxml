@@ -29,7 +29,7 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="32.0" prefWidth="800.0">
          <children>
-            <Label fx:id="warning" prefHeight="21.0" prefWidth="175.0" text="Passwords do not match" textFill="#f50909" visible="false" />
+            <Label fx:id="warning" prefHeight="21.0" prefWidth="175.0" text="Enter correct Details" textFill="#f50909" visible="false" />
          </children>
       </HBox>
       <HBox id="HBox1" alignment="CENTER" prefHeight="46.0" prefWidth="800.0" spacing="20.0" stylesheets="@../../../stylesheets/Hbox.css">
