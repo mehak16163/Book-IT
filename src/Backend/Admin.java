@@ -51,7 +51,6 @@ public class Admin extends User implements Comparable {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		Admin m = new Admin("Nilay Sanghvi", "nilay@iiitd.ac.in" , "admin2");
-		m.serialise();
+		
 	}
 }

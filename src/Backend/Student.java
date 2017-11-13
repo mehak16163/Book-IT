@@ -64,8 +64,7 @@ public class Student extends User implements Comparable {
 	
 	
 	public static void main(String[] args) throws IOException {
-		Student Mehak = new Student("Mahika Wason","mahika16241@iiitd.ac.in","password_4");
-		Mehak.serialise();
+		
 	}
 	public HashMap<Integer , Request > getRequests() {
 		return requests;

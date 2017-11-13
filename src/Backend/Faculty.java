@@ -54,7 +54,6 @@ public class Faculty extends User implements Comparable{
 	}
 
 	public static void main(String[] args) throws IOException {
-		Faculty f = new Faculty("Anuradha Sharma" , "anuradha@iiitd.ac.in" , "faculty_3");
-		f.serialise();
+		
 	}
 }
