@@ -15,7 +15,13 @@ public class Book_Cancel_Controller {
 	public void gotoBook() throws IOException {
 		Main.showBookStudent();
 	}
+	@FXML
 	public void goBack() throws IOException {
 		Main.showStudentIntro();
 	}
+	@FXML
+	public void checkava() throws IOException {
+		Main.showAvailability();
+	}
+	
 }

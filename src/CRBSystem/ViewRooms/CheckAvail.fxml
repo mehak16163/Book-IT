@@ -79,7 +79,7 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button mnemonicParsing="false" stylesheets="@../../../stylesheets/button.css" text="&lt;&lt;Back">
+            <Button mnemonicParsing="false" onAction="#back" stylesheets="@../../../stylesheets/button.css" text="&lt;&lt;Back">
                <effect>
                   <DropShadow />
                </effect>

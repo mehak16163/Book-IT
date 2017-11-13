@@ -23,7 +23,7 @@
       </FlowPane>
       <HBox alignment="CENTER" prefHeight="115.0" prefWidth="800.0">
          <children>
-            <Button mnemonicParsing="false" stylesheets="@../../../stylesheets/button.css" text="View Bookings" />
+            <Button mnemonicParsing="false" onAction="#checkava" stylesheets="@../../../stylesheets/button.css" text="View Bookings" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="85.0" prefWidth="800.0">
