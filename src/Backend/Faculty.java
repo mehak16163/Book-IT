@@ -16,10 +16,7 @@ public class Faculty extends User implements Comparable{
 	public Faculty(String n ,String e ,String p) {
 		super(n,e,p);
 	}
-	public Faculty(String n , String e , String p ,Timetable t) {
-		super(n,e,p);
-		f_table = t;
-	}
+	
 	public void setTable(Timetable t) {
 		f_table = t;
 	}
@@ -57,6 +54,7 @@ public class Faculty extends User implements Comparable{
 	}
 
 	public static void main(String[] args) throws IOException {
-		
+		Faculty f = new Faculty("Anuradha Sharma" , "anuradha@iiitd.ac.in" , "faculty_3");
+		f.serialise();
 	}
 }
