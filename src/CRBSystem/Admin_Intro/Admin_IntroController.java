@@ -28,5 +28,8 @@ public class Admin_IntroController {
 	private void SignUpReq() throws IOException {
 		Main.showSignUpRequests();
 	}
-	
+	@FXML
+	private void CheckAvailabilty() throws IOException {
+		Main.showAvailability();
+	}
 }

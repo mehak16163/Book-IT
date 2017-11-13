@@ -36,7 +36,7 @@ public class Respond_signup_controller {
 		if(list.isEmpty()) {
 			return;
 		}
-		System.out.println(list.get(0));
+		//System.out.println(list.get(0));
 		lw.setItems(list);
 	}
 	@FXML

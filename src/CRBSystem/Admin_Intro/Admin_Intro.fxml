@@ -91,7 +91,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="63.0" prefWidth="281.0" style="-fx-font-size: 25;" stylesheets="@../../../stylesheets/button.css" text="View Rooms Booked">
+                  <Button mnemonicParsing="false" onAction="#CheckAvailabilty" prefHeight="63.0" prefWidth="281.0" style="-fx-font-size: 25;" stylesheets="@../../../stylesheets/button.css" text="Check Rooms">
                      <effect>
                         <DropShadow />
                      </effect>

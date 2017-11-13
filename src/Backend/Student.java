@@ -11,7 +11,7 @@ import java.io.ObjectOutputStream;
 import java.util.HashMap;
 
 public class Student extends User implements Comparable {
-	private Timetable s_table = new Timetable(new Boolean[6][20]) ;
+	private Timetable s_table = new Timetable(new boolean[6][20]) ;
 	static int num_course =0;
 	private HashMap<Integer , Request > requests = new HashMap<>();
 	private HashMap<String , Course > courses = new HashMap<>();

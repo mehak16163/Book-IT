@@ -12,11 +12,21 @@ import java.io.Serializable;
 import java.util.HashMap;
 
 public class Room implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5335174260195498233L;
 	private String name;
 	private Timetable bookings;
 	private int capacity;
 	public int getCapacity() {
 		return capacity;
+	}
+	public String getName() {
+		return name;
+	}
+	public Timetable getTimeTable() {
+		return bookings;
 	}
 	public Room(String m ,Timetable t , int c) {
 		name = m;
@@ -34,7 +44,7 @@ public class Room implements Serializable{
 			out.close();
 		}
 	}
-	public static Room deserialise(String x) throws FileNotFoundException, IOException, ClassNotFoundException {
+	public static Object deserialise(String x) throws FileNotFoundException, IOException, ClassNotFoundException {
 		ObjectInputStream in =null;
 		Room s1;
 		try {
@@ -43,7 +53,7 @@ public class Room implements Serializable{
 			
 		}
 		finally
-		{
+		{	
 			in.close();
 			}
 		return s1;
@@ -79,7 +89,7 @@ public class Room implements Serializable{
 			String[] clm = line.split(",");
 			String name  = clm[0].toLowerCase();
 			int capacity = Integer.parseInt(clm[1]);
-			Boolean[][] table = new Boolean[6][20];
+			boolean[][] table = new boolean[6][20];
 			for(int j=2;j<=6;j++) {
 				if (clm[j].equals("*")){
 					continue;
@@ -88,11 +98,9 @@ public class Room implements Serializable{
 				for(int k=0;k<booking.length;k++) {
 					String[] lecture = booking[k].split("#");
 					String[] time = lecture[1].split("\\*");
-					//System.out.println(time[0]);
 					int start = book.get(time[0]);
-					
 					int end = book.get(time[1])-1;
-					for (int m = start ; m == end ; m++) {
+					for (int m = start ; m <= end ; m++) {
 						table[j-2][m] = true;
 					}
 				}

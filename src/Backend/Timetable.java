@@ -3,9 +3,9 @@ package Backend;
 import java.io.Serializable;
 
 public class Timetable implements Serializable {
-	Boolean[][] table = new Boolean[6][20];
+	public boolean[][] table = new boolean[6][20];
 	
-	public Timetable(Boolean[][] ta) {
+	public Timetable(boolean[][] ta) {
 		table = ta;
 	}
 	

@@ -156,6 +156,16 @@ public class Main extends Application {
 		controller.setScreen(getCurr());
 		primarystage.show();
 	}
+	public static void showAvailability() throws IOException  {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("ViewRooms/CheckAvail.fxml"));
+		mainLayout = loader.load();
+		//setCurr(t);
+		Scene scene = new Scene(mainLayout);
+		primarystage.setTitle("Check Availability");
+		primarystage.setScene(scene);
+		primarystage.show();
+	}
 	public static void setCurr(User curr) {
 		Main.curr = curr;
 	}
