@@ -14,7 +14,7 @@ public class ApplicationData {
 		File file = new File("./src/Database/students");
 		String[] x1 = file.list();
 		for (int i=0;i<x1.length;i++) {
-			Student st = Student.deserialise("./src/Database/students/"+x1[i]+".txt");
+			Student st = Student.deserialise("./src/Database/students/"+x1[i]);
 			if (st.compareTo(s)==1) {
 				return true;
 			}

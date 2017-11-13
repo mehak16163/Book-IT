@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRBSystem.student_intro.Book_Cancel_Controller">
    <children>
       <HBox prefHeight="87.0" prefWidth="800.0">
          <children>
@@ -62,8 +62,7 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="65.0" VBox.vgrow="ALWAYS">
          <children>
-            <Button mnemonicParsing="false" stylesheets="@../../../stylesheets/button.css" text="&lt;&lt;Back" />
-            <Button mnemonicParsing="false" stylesheets="@../../../stylesheets/button.css" text="Logout" />
+            <Button mnemonicParsing="false" onAction="#goBack" stylesheets="@../../../stylesheets/button.css" text="&lt;&lt;Back" />
          </children>
       </HBox>
    </children>

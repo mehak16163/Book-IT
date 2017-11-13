@@ -85,7 +85,7 @@
                         <DropShadow />
                      </effect>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="69.0" prefWidth="319.0" style="-fx-font-size: 24;" stylesheets="@../../../stylesheets/button.css" text="View Prerequisites" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Button mnemonicParsing="false" onAction="#viewPreReq" prefHeight="69.0" prefWidth="319.0" style="-fx-font-size: 24;" stylesheets="@../../../stylesheets/button.css" text="View Prerequisites" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <effect>
                         <DropShadow />
                      </effect>

@@ -16,10 +16,7 @@ public class Student extends User implements Comparable {
 	private HashMap<Integer , Request > requests = new HashMap<>();
 	private HashMap<String , Course > courses = new HashMap<>();
 	
-	public Student(String n , String e , String p ,Timetable t) {
-		super(n,e,p);
-		s_table = t;
-	}
+	
 	public Student(String n , String e , String p ) {
 		super(n,e,p);
 	}
@@ -53,7 +50,7 @@ public class Student extends User implements Comparable {
 		}
 		finally
 		{
-			in.close();
+			//in.close();
 			}
 		return s1;
 	}
@@ -67,7 +64,8 @@ public class Student extends User implements Comparable {
 	
 	
 	public static void main(String[] args) throws IOException {
-		
+		Student Mehak = new Student("Mahika Wason","mahika16241@iiitd.ac.in","password_4");
+		Mehak.serialise();
 	}
 	public HashMap<Integer , Request > getRequests() {
 		return requests;

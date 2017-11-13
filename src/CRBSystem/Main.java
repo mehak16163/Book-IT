@@ -65,7 +65,7 @@ public class Main extends Application {
 	}
 	public static void showSearchCourses() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Main.class.getResource("student_intro/Search_Courses"));
+		loader.setLocation(Main.class.getResource("student_intro/Search_Courses.fxml"));
 		mainLayout = loader.load();
 		Scene scene = new Scene(mainLayout);
 		primarystage.setTitle("TimeTable");

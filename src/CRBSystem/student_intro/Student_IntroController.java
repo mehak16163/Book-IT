@@ -15,7 +15,7 @@ public class Student_IntroController {
 	@FXML
 	
 	private  Label email ;
-	
+	 
 	
 	public void  setScreen(User a) {
 		name.setText(a.getName());
