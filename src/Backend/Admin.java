@@ -12,6 +12,7 @@ import java.util.HashMap;
 
 public class Admin extends User implements Comparable {
 	private static HashMap<Integer , Request> requests = new HashMap<>();
+	private static HashMap<Integer , SignUpRequest> signupreq = new HashMap<>();
 	public Admin(String n  ,String e, String p) {
 		super(n,e,p);
 	}
@@ -50,15 +51,7 @@ public class Admin extends User implements Comparable {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
-		ObjectOutputStream out=null ;
-		String name = rd.readLine();
-		String email = rd.readLine();
-		String pass = rd.readLine();
-		//File f = new File("./src/Database/"+name+".txt");
-		Admin s = new Admin(name , email , pass);
-		out  = new ObjectOutputStream(new FileOutputStream("./src/Database/admins/"+name+".txt"));
-		out.writeObject(s);
-		out.close();
+		Admin m = new Admin("Nilay Sanghvi", "nilay@iiitd.ac.in" , "admin2");
+		m.serialise();
 	}
 }
