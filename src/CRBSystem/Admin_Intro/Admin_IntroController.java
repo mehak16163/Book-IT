@@ -24,6 +24,9 @@ public class Admin_IntroController {
 	private void logout() throws IOException {
 		Main.showMainPage();
 	}
-	
+	@FXML
+	private void SignUpReq() throws IOException {
+		Main.showSignUpRequests();
+	}
 	
 }

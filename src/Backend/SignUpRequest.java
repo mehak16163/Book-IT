@@ -9,6 +9,27 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 public class SignUpRequest implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8312553311027397734L;
+
+	/**
+	 * 
+	 */
+
+	public String getName() {
+		return name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public String getPass() {
+		return pass;
+	}
+	public String getType() {
+		return type;
+	}
 	private String name;
 	private String email;
 	private String pass;
@@ -30,7 +51,7 @@ public class SignUpRequest implements Serializable {
 			out.close();
 		}
 	}
-	public static SignUpRequest deserialise(String x) throws FileNotFoundException, IOException, ClassNotFoundException {
+	public static Object deserialise(String x) throws FileNotFoundException, IOException, ClassNotFoundException {
 		ObjectInputStream in =null;
 		SignUpRequest s1;
 		try {

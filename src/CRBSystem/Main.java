@@ -63,6 +63,15 @@ public class Main extends Application {
 		primarystage.setScene(scene);
 		primarystage.show();
 	}
+	public static void showSignUpRequests() throws IOException {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("Admin_Intro/Respond_signup.fxml"));
+		mainLayout = loader.load();
+		Scene scene = new Scene(mainLayout);
+		primarystage.setTitle("Signup Requests");
+		primarystage.setScene(scene);
+		primarystage.show();
+	}
 	public static void showSearchCourses() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("student_intro/Search_Courses.fxml"));

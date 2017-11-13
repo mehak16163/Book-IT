@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRBSystem.Admin_Intro.Respond_signup_controller">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="SignUp Requests">
+               <font>
+                  <Font name="Comic Sans MS" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="111.0" prefWidth="800.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#populate" stylesheets="@../../../stylesheets/button.css" text="View Requests">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="210.0" prefWidth="800.0" spacing="50.0">
+         <children>
+            <ListView fx:id="lw" disable="true" editable="true" prefHeight="200.0" prefWidth="200.0" />
+            <Label prefHeight="59.0" prefWidth="149.0" text="Enter Request">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tf" />
+            <Button mnemonicParsing="false" onAction="#ShowDetails" text="View Details" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="157.0" prefWidth="800.0" spacing="50.0">
+         <children>
+            <TextField fx:id="ta" />
+            <Button mnemonicParsing="false" onAction="#Accept" text="Accept Request" />
+            <Button mnemonicParsing="false" onAction="#back" text="&lt;&lt;Back" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

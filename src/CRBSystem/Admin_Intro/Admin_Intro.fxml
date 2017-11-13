@@ -71,7 +71,7 @@
                         <DropShadow />
                      </effect>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="68.0" prefWidth="309.0" style="-fx-font-size: 25px;" stylesheets="@../../../stylesheets/button.css" text="View SignUp Requests">
+                  <Button mnemonicParsing="false" onAction="#SignUpReq" prefHeight="68.0" prefWidth="309.0" style="-fx-font-size: 25px;" stylesheets="@../../../stylesheets/button.css" text="View SignUp Requests">
                      <effect>
                         <DropShadow />
                      </effect>
