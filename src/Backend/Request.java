@@ -7,11 +7,13 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class Request implements Serializable , Comparable {
 	static int counter =1;
-	private final int id=counter;
+	private int id;
 	private Student student;
 	private String purpose;
 	private int capacity;
@@ -20,15 +22,20 @@ public class Request implements Serializable , Comparable {
 	private Boolean valid ;
 	private Room room;
 	private String time;
-	Date date;
-	public Request(Student s , String p , String r ,int c,  Date d , String t) {
+	private String day;
+	public String date;
+	public Request(Student s , String p , String r ,int c,  String d , String t) {
+		id = counter;
 		student =s;
 		purpose = p;
 		roomname = r;
 		capacity =c;
-		date =d;
+		day =d;
 		time =t;
 		counter++;
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+		LocalDate localDate = LocalDate.now();
+		date = dtf.format(localDate); 
 	}
 	
 	public void serialise() throws FileNotFoundException, IOException {
@@ -77,8 +84,8 @@ public class Request implements Serializable , Comparable {
 	public Boolean getValid() {
 		return valid;
 	}
-	public Date getDate() {
-		return date;
+	public String getDay() {
+		return day;
 	}
 
 	@Override
@@ -89,5 +96,8 @@ public class Request implements Serializable , Comparable {
 		return 0;
 	}
 	
+	public static void main(String[] args) {
+		
+	}
 	
 }

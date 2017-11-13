@@ -54,7 +54,7 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="86.0" prefWidth="800.0">
          <children>
-            <Label alignment="CENTER" stylesheets="@../../../Downloads/Classroom-Booking-System-master/stylesheets/Hbox.css" text="Booking Date">
+            <Label alignment="CENTER" stylesheets="@../../../Downloads/Classroom-Booking-System-master/stylesheets/Hbox.css" text="Booking Day">
                <font>
                   <Font name="Comic Sans MS" size="28.0" />
                </font>
@@ -62,17 +62,7 @@
                   <Insets right="120.0" />
                </HBox.margin>
             </Label>
-            <DatePicker fx:id="date" promptText="Select a date">
-               <effect>
-                  <ColorAdjust />
-               </effect>
-               <opaqueInsets>
-                  <Insets right="100.0" />
-               </opaqueInsets>
-               <HBox.margin>
-                  <Insets right="50.0" />
-               </HBox.margin>
-            </DatePicker>
+            <TextField prefHeight="31.0" prefWidth="254.0" />
          </children>
          <opaqueInsets>
             <Insets right="100.0" />

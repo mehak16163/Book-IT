@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRBSystem.Admin_Intro.Respond_Controller">
    <children>
       <FlowPane prefHeight="89.0" prefWidth="800.0">
          <children>
@@ -31,13 +32,18 @@
             </Label>
          </children>
       </HBox>
+      <HBox alignment="CENTER" prefHeight="90.0" prefWidth="800.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#list" stylesheets="@../../../stylesheets/button.css" text="List Requests">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+      </HBox>
       <HBox alignment="CENTER" prefHeight="200.0" prefWidth="800.0">
          <children>
-            <TextArea prefHeight="200.0" prefWidth="441.0" promptText="List of Requests">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </TextArea>
+            <ListView fx:id="lw" prefHeight="200.0" prefWidth="399.0" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="97.0" prefWidth="800.0" spacing="50.0">

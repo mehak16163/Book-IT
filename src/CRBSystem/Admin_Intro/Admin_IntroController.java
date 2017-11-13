@@ -32,4 +32,8 @@ public class Admin_IntroController {
 	private void CheckAvailabilty() throws IOException {
 		Main.showAvailability();
 	}
+	@FXML
+	private void viewreq() throws IOException {
+		Main.showRequests();
+	}
 }

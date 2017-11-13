@@ -66,7 +66,7 @@
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="810.0" spacing="25.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="64.0" prefWidth="260.0" style="-fx-font-size: 23;" stylesheets="@../../../stylesheets/button.css" text="Respond to Request">
+                  <Button mnemonicParsing="false" onAction="#viewreq" prefHeight="64.0" prefWidth="260.0" style="-fx-font-size: 23;" stylesheets="@../../../stylesheets/button.css" text="Respond to Request">
                      <effect>
                         <DropShadow />
                      </effect>

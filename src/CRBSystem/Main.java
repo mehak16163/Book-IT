@@ -170,6 +170,16 @@ public class Main extends Application {
 		Main.curr = curr;
 	}
 	
+	public static void showRequests() throws IOException {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("Admin_Intro/Respond.fxml"));
+		mainLayout = loader.load();
+		Scene scene = new Scene(mainLayout);
+		primarystage.setTitle("Booking Requests");
+		primarystage.setScene(scene);
+		primarystage.show();
+	}
+	
 	public static void showCancelStudent() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("CancelBooking/Cancel.fxml"));
