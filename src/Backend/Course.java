@@ -16,14 +16,14 @@ public class Course implements Serializable {
 	private String code;
 	private Timetable time;
 	private Room[] rooms = new Room[6];
-	private Faculty fac;
+	private String fac;
 	private HashMap<String, Student> students = new HashMap<>();
 	private HashMap<Integer,String > prereqs = new HashMap<>();
 	private static int prereq_count=0;
 	private static int post_count =0;
 	private HashMap<Integer , String> post = new HashMap<>();
 	
-	public Course(String na,String n , String a,String c ,Timetable t , Room[] r , Faculty f ) {
+	public Course(String na,String n , String a,String c ,Timetable t , Room[] r , String f ) {
 		code =c;
 		fac =f;
 		acro =a;
