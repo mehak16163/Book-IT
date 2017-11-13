@@ -1,17 +1,17 @@
-Mandatory/Elective,Course_name,Course_Number,Instructor,Credits,Acronym,Monday_class,Tuesday_class,Wednesday_class,Thursday_class,Friday_class,Monday_tut,Tuesday_tut,Wednesday_tut,Thursday_tut,Friday_tut,Monday_lab,Tuesday_lab,Wednesday_lab,Thursday_lab,Friday_lab
-Mandatory,Discrete Mathematics,CSE121,Donghoon Chang,4,DM,-,1:30-3:00$c21,-,-,11:30-1:00$c21,-,-,4:00-5:30$s01,-,4:00-5:30$lr1$lr2$lr3,-,-,-,-,-
-Mandatory,Advanced Progrmming,CSE201,Vivek Kumar,4,AP,11:00-12:00$c21,-,11:00-12:00$c21,11:00-12:00$c21,-,12:00-1:00$lr1$lr2$s01$s02,-,-,-,-,-,-,-,12:00-1:00$l21$l22$l23,-
-Mandatory,Computer Organization,CSE112,Naveen Prakash(G),4,CO,-,-,2:30-4:00$c21,4:00-5:30$c01,-,-,-,1:30-2:30$lr2$lr3$c22$c23,-,-,-,-,-,-,-
-Elective,Math-III,MTH203,Sarthok Sircar,4,M-III,-,3:00-4:00$c21,-,3:00-4:00$c21,3:00-4:00$c21,8:30-10:00$lr1#1:30-3:00$lr1,-,-,-,-,-,-,-,-,-
-Elective,Signals and Systems,ECE250,Anubha Gupta,4,S&S,-,11:00-12:00$c21,-,2:00-3:00$c21,2:00-3:00$c21,2:00-3:00$lr3,-,-,-,-,-,-,-,-,-
-Elective,Real Analysis 1,MTH2XX,Samaresh Chatterji(V),4,RA,3:00-4:00$c02,10:00-11:00$c02,-,10:00-11:00$c02,-,1:30-3:00$lr2,-,-,-,-,-,-,-,-,-
-Elective,Number Theory,MTH2XX,Anuradha Sharma,4,NT,10:00-11:00$c12,-,10:00-11:00$c12,-,9:30-10:30$c12,2:00-3:00$c23,-,-,-,10:30-11:30$lr1,-,-,-,-,-
-HSS Elective,Perspectives of Knowledge,HSS202,Raj Ayyar(V),4,PoK,4:00-5:30$c24,-,4:00-5:30$c24,-,-,-,-,-,-,-,-,-,-,-,-
-HSS Elective,Introduction to Psychology,HSS204,Akshay Kumar(V),4,Psy,4:00-5:30$c01,-,4:00-5:30$c01,-,-,-,-,-,-,-,-,-,-,-,-
-HSS Elective,Theatre Appreciation,HSS211,Manohar Khushlani(V),4,TA,4:00-5:30$c12,-,4:00-5:30$c12,-,-,-,-,-,-,-,-,-,-,-,-
-HSS Elective,Introduction to Digital Ethonography,HSS2XX,Shriram Venkatraman,4,IDE,4:00-5:30$c11,-,4:00-5:30$c11,-,-,-,-,-,-,-,-,-,-,-,-
-HSS Elective,Key Concepts in Economic Sociology,HSS2ES,Amrit Srinivasan(V),4,ES,-,4:00-5:30$c24,-,-,4:00-5:30$c24,-,-,-,-,-,-,-,-,-,-
-HSS Elective,Introduction to Media In Society: A Public Sphere Approach,HSS2XX,Aasim Khan,4,IMS,-,4:00-5:30$c03,-,-,4:00-5:30$c03,-,-,-,-,-,-,-,-,-,-
-HSS Elective,Theory & Practice of Engineering Ethics,HSS208,Raj Ayyar(V),4,TPEE,-,4:00-5:30$c22,-,-,4:00-5:30$c22,-,-,-,-,-,-,-,-,-,-
-HSS Elective,Introduction to Social Informatics,HSS2XX,Venkata Ratandeep Suri,4,ISI,-,4:00-5:30$c13,-,-,4:00-5:30$c13,-,-,-,-,-,-,-,-,-,-
-HSS Elective,Introduction to Poetry,HSS223A,Saumya Kulshreshtha(G),2,PO,-,4:30-6:00$c02,-,-,-,-,-,-,-,-,-,-,-,-,-
+Mandatory/Elective,Course Name ,Course Code,Instructor,Credits,Acronym,Monday Time$Venue,Tueday Time$Venue,Wednesday Time$Venue,Thurday Time$Venue,Friday Time$Venue, Monday_Tut Time$Venue,Tueday_Tut Time$Venue,Wednesday_Tut Time$Venue,Thurday_Tut Time$Venue,Friday_Tut Time$Venue,Monday_Lab Time$Venue,Tueday_Lab Time$Venue,Wednesday_Lab Time$Venue,Thurday_Lab Time$Venue,Friday_Lab Time$Venue
+Mandatory,Discrete Mathematics,CSE121,Donghoon Chang,4,DM,-,1.30-3.00$c21,-,-,11.30-1.00$c21,-,-,4.00-5.30$s01,-,4.00-5.30$lr1$lr2$lr3,-,-,-,-,-
+Mandatory,Advanced Progrmming,CSE201,Vivek Kumar,4,AP,11.00-12.00$c21,-,11.00-12.00$c21,11.00-12.00$c21,-,12.00-1.00$lr1$lr2$s01$s02,-,-,-,-,-,-,-,12.00-1.00$l21$l22$l23,-
+Mandatory,Computer Organization,CSE112,Naveen Prakash(G),4,CO,-,-,2.30-4.00$c21,4.00-5.30$c01,-,-,-,1.30-2.30$lr2$lr3$c22$c23,-,-,-,-,-,-,-
+Elective,Math-III,MTH203,Sarthok Sircar,4,M-III,-,3.00-4.00$c21,-,3.00-4.00$c21,3.00-4.00$c21,8.30-10.00$lr1$1.30-3.00$lr1,-,-,-,-,-,-,-,-,-
+Elective,Signals and Systems,ECE250,Anubha Gupta,4,S&S,-,11.00-12.00$c21,-,2.00-3.00$c21,2.00-3.00$c21,2.00-3.00$lr3,-,-,-,-,-,-,-,-,-
+Elective,Real Analysis 1,MTH2XX,Samaresh Chatterji(V),4,RA,3.00-4.00$c02,10.00-11.00$c02,-,10.00-11.00$c02,-,1.30-3.00$lr2,-,-,-,-,-,-,-,-,-
+Elective,Number Theory,MTH2XX,Anuradha Sharma,4,NT,10.00-11.00$c12,-,10.00-11.00$c12,-,9.30-10.30$c12,2.00-3.00$c23,-,-,-,10.30-11.30$lr1,-,-,-,-,-
+HSS Elective,Perspectives of Knowledge,HSS202,Raj Ayyar(V),4,PoK,4.00-5.30$c24,-,4.00-5.30$c24,-,-,-,-,-,-,-,-,-,-,-,-
+HSS Elective,Introduction to Psychology,HSS204,Akshay Kumar(V),4,Psy,4.00-5.30$c01,-,4.00-5.30$c01,-,-,-,-,-,-,-,-,-,-,-,-
+HSS Elective,Theatre Appreciation,HSS211,Manohar Khushlani(V),4,TA,4.00-5.30$c12,-,4.00-5.30$c12,-,-,-,-,-,-,-,-,-,-,-,-
+HSS Elective,Introduction to Digital Ethonography,HSS2XX,Shriram Venkatraman,4,IDE,4.00-5.30$c11,-,4.00-5.30$c11,-,-,-,-,-,-,-,-,-,-,-,-
+HSS Elective,Key Concepts in Economic Sociology,HSS2ES,Amrit Srinivasan(V),4,ES,-,4.00-5.30$c24,-,-,4.00-5.30$c24,-,-,-,-,-,-,-,-,-,-
+HSS Elective,Introduction to Media In Society. A Public Sphere Approach,HSS2XX,Aasim Khan,4,IMS,-,4.00-5.30$c03,-,-,4.00-5.30$c03,-,-,-,-,-,-,-,-,-,-
+HSS Elective,Theory & Practice of Engineering Ethics,HSS208,Raj Ayyar(V),4,TPEE,-,4.00-5.30$c22,-,-,4.00-5.30$c22,-,-,-,-,-,-,-,-,-,-
+HSS Elective,Introduction to Social Informatics,HSS2XX,Venkata Ratandeep Suri,4,ISI,-,4.00-5.30$c13,-,-,4.00-5.30$c13,-,-,-,-,-,-,-,-,-,-
+HSS Elective,Introduction to Poetry,HSS223A,Saumya Kulshreshtha(G),2,PO,-,4.30-6.00$c02,-,-,-,-,-,-,-,-,-,-,-,-,-

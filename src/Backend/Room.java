@@ -49,7 +49,7 @@ public class Room implements Serializable{
 		return s1;
 	}
 	public static void main(String[] args) throws IOException {
-		HashMap<String , Integer> book = new HashMap<>();
+		/*HashMap<String , Integer> book = new HashMap<>();
 		book.put("8.00", 0);
 		book.put("8.30", 1);
 		book.put("9.00", 2);
@@ -100,7 +100,7 @@ public class Room implements Serializable{
 			Timetable tb = new Timetable(table);
 			Room r = new Room(name , tb , capacity);
 			r.serialise();
-		}
+		}*/
 	}
 	
 }
