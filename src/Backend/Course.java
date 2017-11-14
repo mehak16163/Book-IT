@@ -189,7 +189,7 @@ public class Course implements Serializable {
 			c.prereq_count = 1;
 			String[] post = line1[7].split(" ");
 			for (int g=0;g<post.length;g++) {
-				c.post.put(post[g] , g+1);
+				c.post.put(post[g].toLowerCase() , g+1);
 				c.post_count++;
 			}
 			c.serialise();

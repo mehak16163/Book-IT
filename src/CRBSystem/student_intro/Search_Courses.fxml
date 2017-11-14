@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRBSystem.student_intro.SearchCourseController">
    <children>
       <FlowPane prefHeight="72.0" prefWidth="800.0">
          <children>
@@ -24,11 +24,19 @@
       </FlowPane>
       <HBox alignment="CENTER" prefHeight="75.0" prefWidth="800.0">
          <children>
-            <Label alignment="CENTER" prefHeight="56.0" prefWidth="463.0" text="View Prerequisites">
+            <Label alignment="CENTER" prefHeight="52.0" prefWidth="373.0" text="Search Courses">
                <font>
-                  <Font name="AR ESSENCE" size="50.0" />
+                  <Font size="41.0" />
                </font>
             </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="46.0" prefWidth="800.0">
+         <children>
+            <Label fx:id="warning" text="TimeTable clash" textFill="#f20d0d" visible="false">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="86.0" prefWidth="800.0" spacing="70.0">
@@ -38,23 +46,29 @@
                   <Font size="35.0" />
                </font>
             </Label>
-            <TextField />
+            <TextField fx:id="post" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="90.0" prefWidth="800.0">
          <children>
-            <Button mnemonicParsing="false" stylesheets="@../../../stylesheets/button.css" text="Search Courses" />
+            <Button mnemonicParsing="false" onAction="#search" stylesheets="@../../../stylesheets/button.css" text="Search Courses" />
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="163.0" prefWidth="800.0">
+      <HBox alignment="CENTER" prefHeight="163.0" prefWidth="800.0" spacing="30.0">
          <children>
-            <TextArea prefHeight="200.0" prefWidth="200.0" />
+            <ListView fx:id="lw" prefHeight="163.0" prefWidth="288.0" />
+            <Label text="Enter Course Code">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="70.0">
          <children>
-            <Button mnemonicParsing="false" stylesheets="@../../../stylesheets/button.css" text="&lt;&lt;Back" />
-            <Button mnemonicParsing="false" stylesheets="@../../../stylesheets/button.css" text="Logout" />
+            <Button mnemonicParsing="false" onAction="#goBack" stylesheets="@../../../stylesheets/button.css" text="&lt;&lt;Back" />
+            <Button mnemonicParsing="false" stylesheets="@../../../stylesheets/button.css" text="Add Course" />
          </children>
       </HBox>
    </children>
