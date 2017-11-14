@@ -16,6 +16,8 @@ import javafx.scene.control.TextField;
 
 public class SearchCourseController {
 	@FXML
+	private Label warning2;
+	@FXML
 	private Label warning ; 
 	@FXML
 	private TextField post;
@@ -26,12 +28,15 @@ public class SearchCourseController {
 	private TextField name;
 	@FXML
 	private void goBack() throws IOException {
+		warning2.setVisible(false);
+		warning.setVisible(false);
 		list.clear();
 		Main.showStudentIntro();
 	}
 	@FXML
 	private void search() throws FileNotFoundException, ClassNotFoundException, IOException {
 		list.clear();
+		warning2.setVisible(false);
 		warning.setVisible(false);
 		String text = post.getText().toLowerCase();
 		String[] postc = text.split(" ");

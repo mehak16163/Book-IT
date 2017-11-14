@@ -37,6 +37,11 @@
                <font>
                   <Font size="19.0" />
                </font></Label>
+            <Label fx:id="warning2" text="Already Registered" textFill="RED" visible="false">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="86.0" prefWidth="800.0" spacing="70.0">
