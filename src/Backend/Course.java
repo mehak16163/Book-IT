@@ -62,7 +62,7 @@ public class Course implements Serializable {
 			}
 		return s1;
 	}
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException {/*
 		HashMap<String , Integer> book = new HashMap<>();
 		book.put("8.00", 0);
 		book.put("8.30", 1);
@@ -116,7 +116,7 @@ public class Course implements Serializable {
 				}
 				else
 					d=4;
-				if (line2[j].equals("\\-")) {
+				if (line2[j].equals("-")) {
 					continue;
 				}
 				else {
@@ -147,7 +147,7 @@ public class Course implements Serializable {
 			}
 			c.serialise();
 		}
-		
+		*/
 	}
 
 }
