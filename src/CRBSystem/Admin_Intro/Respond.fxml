@@ -32,7 +32,7 @@
             </Label>
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="90.0" prefWidth="800.0">
+      <HBox alignment="CENTER" prefHeight="110.0" prefWidth="800.0">
          <children>
             <Button mnemonicParsing="false" onAction="#list" stylesheets="@../../../stylesheets/button.css" text="List Requests">
                <effect>
@@ -41,19 +41,27 @@
             </Button>
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="200.0" prefWidth="800.0">
+      <HBox alignment="CENTER" prefHeight="200.0" prefWidth="800.0" spacing="10.0">
          <children>
-            <ListView fx:id="lw" prefHeight="200.0" prefWidth="399.0" />
+            <ListView fx:id="lw" prefHeight="200.0" prefWidth="301.0" />
+            <Label text="Enter Request ID">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="id" prefHeight="31.0" prefWidth="76.0" />
+            <Label text="Enter Room Number" />
+            <TextField fx:id="room" prefHeight="31.0" prefWidth="47.0" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="97.0" prefWidth="800.0" spacing="50.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="68.0" prefWidth="159.0" stylesheets="@../../../stylesheets/button.css" text="Accept">
+            <Button mnemonicParsing="false" onAction="#accept" prefHeight="68.0" prefWidth="159.0" stylesheets="@../../../stylesheets/button.css" text="Accept">
                <font>
                   <Font size="22.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="68.0" prefWidth="191.0" stylesheets="@../../../stylesheets/button.css" text="Reject">
+            <Button mnemonicParsing="false" onAction="#reject" prefHeight="68.0" prefWidth="191.0" stylesheets="@../../../stylesheets/button.css" text="Reject">
                <font>
                   <Font size="22.0" />
                </font>

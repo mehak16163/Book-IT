@@ -32,32 +32,6 @@
             </Label>
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="70.0">
-         <children>
-            <Label alignment="CENTER" prefHeight="32.0" prefWidth="188.0" stylesheets="@../../../Downloads/Classroom-Booking-System-master/stylesheets/Hbox.css" text="Booking Date">
-               <font>
-                  <Font name="Comic Sans MS" size="22.0" />
-               </font>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </Label>
-            <DatePicker prefHeight="31.0" prefWidth="152.0" promptText="Select a date">
-               <effect>
-                  <ColorAdjust />
-               </effect>
-               <opaqueInsets>
-                  <Insets right="100.0" />
-               </opaqueInsets>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </DatePicker>
-         </children>
-         <opaqueInsets>
-            <Insets right="100.0" />
-         </opaqueInsets>
-      </HBox>
       <HBox alignment="CENTER" prefHeight="59.0" prefWidth="600.0" stylesheets="@../../../Downloads/Classroom-Booking-System-master/stylesheets/Hbox.css">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="379.0" text="Time Slot">

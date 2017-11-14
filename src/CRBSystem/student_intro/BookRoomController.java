@@ -22,7 +22,7 @@ public class BookRoomController {
 	@FXML
 	private TextField name;
 	@FXML
-	private TextField day;
+	private DatePicker date;
 	@FXML
 	private TextField from;
 	@FXML
@@ -78,14 +78,11 @@ public class BookRoomController {
 			check = false;
 			warning.setVisible(true);
 		}
-		if (day.getText().equals("")) {
-			check = false;
-			warning.setVisible(true);
-		}
+		
 		
 		if (check) {
 			
-			Request req = new Request((Student)Main.getCurr(),purpose.getText(),room.getText(),Integer.parseInt(capacity.getText()),day.getText() ,from.getText()+"-"+to.getText());
+			Request req = new Request((Student)Main.getCurr(),purpose.getText(),room.getText(),Integer.parseInt(capacity.getText()),date.getValue() ,from.getText()+"-"+to.getText());
 			req.serialise();
 			id.setText(Integer.toString(req.getId()));
 			id.setVisible(false);

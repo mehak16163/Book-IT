@@ -3,18 +3,27 @@ package CRBSystem.Admin_Intro;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
 import Backend.Request;
+import Backend.Room;
 import Backend.Student;
 import CRBSystem.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
-
+import javafx.scene.control.TextField;
+import java.time.temporal.ChronoUnit;
 public class Respond_Controller {
+	@FXML
+	private TextField id;
+	@FXML
+	private TextField room;
 	@FXML
 	private void goback() throws IOException {
 		Main.showAdminIntro();
@@ -29,26 +38,93 @@ public class Respond_Controller {
 		String[] x1 = file.list();
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
 		LocalDate localDate = LocalDate.now();
-		String currdate = dtf.format(localDate);
-		int date = Integer.parseInt(currdate.split("/")[2])*(Integer.parseInt(currdate.split("/")[1])-1);
-		for(int i =0 ; i<x1.length;i++) {
-			Request r = Request.deserialise("./src/Database/requests/"+x1[i]);
-			int rdate = Integer.parseInt(r.date.split("/")[2])*(Integer.parseInt(r.date.split("/")[1])-1);
-			if ((date-rdate)>5) {
-				File f = new File("./src/Database/requests/"+ x1[i]);
-				Student s = r.getStudent();
-				s.getRequests().remove(r.getId());
+		for (int i=0;i<x1.length;i++) {
+			Request request = Request.deserialise("./src/Database/requests/"+x1[i]);
+			if (ChronoUnit.DAYS.between(localDate , request.reqdate)>5) {
+				File f = new File("./src/Database/requests/"+x1[i]);
+				Student s = request.getStudent();
+				s.getRequests().remove(request.getId());
 				s.serialise();
 				f.delete();
 				continue;
 			}
-			String display = r.getId() + " " + r.getStudent().getName() + " " + r.getDay() + " " + r.getRoomname() + " " + r.getPurpose() + " " + r.getCapacity() ;
-			list.add(display);
+			
+			if (localDate.isAfter(request.getDate())) {
+				if (request.getAccepted()==true) {
+					request.remove();
+					continue;
+				}
+				else {
+					File f = new File("./src/Database/requests/"+x1[i]);
+					Student s = request.getStudent();
+					s.getRequests().remove(request.getId());
+					s.serialise();
+					f.delete();
+					continue;
+				}
+			}
+			String output = request.getId() + " " + request.getStudent().getName() + " " + request.getPurpose() + " " + request.getRoomname() + " " + request.getCapacity();
+			list.add(output);
+			
 		}
-		if (list.isEmpty())
-			return;
-		else {
-			lw.setItems(list);
-		}
+		lw.setItems(list);
 	}
+	
+	@FXML
+	private void accept() throws FileNotFoundException, ClassNotFoundException, IOException {
+		if (id.getText().equals(""))
+			return;
+		if (room.getText().equals(""))
+			return;
+		int id_ = Integer.parseInt(id.getText());
+		String room_ = room.getText().toLowerCase();
+		File file = new File("./src/Database/requests");
+		String[] x1 = file.list();
+		Request request=null;
+		for (int i=0;i<x1.length;i++) {
+			request = Request.deserialise("./src/Database/requests/"+x1[i]);
+			if (request.getId()==id_) {
+				break;
+			}
+		}
+		request.accepted=true;
+		File file1 = new File("./src/Database/rooms");
+		String[] x2 = file1.list();
+		Room r = null;
+		for (int i=0;i<x2.length;i++) {
+			r = (Room) Room.deserialise("./src/Database/requests/"+x1[i]);
+			if (r.getName().equals(room_)) {
+				break;
+			}
+		}
+		request.setRoom(r);
+		request.serialise();
+		request.add();
+		
+	}
+	
+	@FXML
+	public void reject() throws FileNotFoundException, ClassNotFoundException, IOException {
+		if (id.getText().equals(""))
+			return;
+		int id_ = Integer.parseInt(id.getText());
+		File file = new File("./src/Database/requests");
+		String[] x1 = file.list();
+		Request request=null;
+		for (int i=0;i<x1.length;i++) {
+			request = Request.deserialise("./src/Database/requests/"+x1[i]);
+			if (request.getId()==id_) {
+				break;
+			}
+		}
+		File f = new File("./src/Database/requests/"+request.getId()+".txt");
+		f.delete();
+		Student s = request.getStudent();
+		s.getRequests().remove(request.getId());
+		s.serialise();
+	}
+	
+	
+		
+	
 }
