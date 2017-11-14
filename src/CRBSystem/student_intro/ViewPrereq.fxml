@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
@@ -7,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRBSystem.student_intro.Book_Cancel_Controller">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRBSystem.student_intro.ViewPrereqController">
    <children>
       <HBox prefHeight="87.0" prefWidth="800.0">
          <children>
@@ -44,25 +45,37 @@
                         <Font name="AR CENA" size="32.0" />
                      </font>
                   </Label>
-                  <TextField promptText="Course ID" GridPane.columnIndex="1" />
+                  <TextField fx:id="code" promptText="Course ID" GridPane.columnIndex="1" />
                   <Label prefHeight="47.0" prefWidth="300.0" text="Enter Course Name" GridPane.rowIndex="1">
                      <font>
                         <Font name="AR CENA" size="32.0" />
                      </font>
                   </Label>
-                  <TextField promptText="Course Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="name" promptText="Course Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>
             </GridPane>
          </children>
       </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#prereq" stylesheets="@../../../stylesheets/button.css" text="View Prerequisites">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+      </HBox>
       <HBox alignment="CENTER" prefHeight="156.0" prefWidth="800.0">
          <children>
-            <TextArea disable="true" prefHeight="156.0" prefWidth="466.0" />
+            <TextField fx:id="result" editable="false" prefHeight="31.0" prefWidth="389.0" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="65.0" VBox.vgrow="ALWAYS">
          <children>
-            <Button mnemonicParsing="false" onAction="#goBack" stylesheets="@../../../stylesheets/button.css" text="&lt;&lt;Back" />
+            <Button mnemonicParsing="false" onAction="#goback" stylesheets="@../../../stylesheets/button.css" text="&lt;&lt;Back">
+               <effect>
+                  <DropShadow />
+               </effect></Button>
          </children>
       </HBox>
    </children>

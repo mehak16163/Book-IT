@@ -1,9 +1,9 @@
 Mandatory/Elective,Course Name ,Course Code,Instructor,Credits,Acronym,Monday Time$Venue,Tueday Time$Venue,Wednesday Time$Venue,Thurday Time$Venue,Friday Time$Venue, Monday_Tut Time$Venue,Tueday_Tut Time$Venue,Wednesday_Tut Time$Venue,Thurday_Tut Time$Venue,Friday_Tut Time$Venue,Monday_Lab Time$Venue,Tueday_Lab Time$Venue,Wednesday_Lab Time$Venue,Thurday_Lab Time$Venue,Friday_Lab Time$Venue
-Mandatory,Advanced Progrmming,CSE201,Vivek Kumar,4,AP,11.00-12.00$c21,-,11.00-12.00$c21,11.00-12.00$c21,-,12.00-1.00$lr1$lr2$s01$s02,-,-,-,-,-,-,-,12.00-1.00$l21$l22$l23,-
+Mandatory,Advanced Programming,CSE201,Vivek Kumar,4,AP,11.00-12.00$c21,-,11.00-12.00$c21,11.00-12.00$c21,-,12.00-1.00$lr1$lr2$s01$s02,-,-,-,-,-,-,-,12.00-1.00$l21$l22$l23,-
 Mandatory,Computer Organization,CSE112,Naveen Prakash(G),4,CO,-,-,2.30-4.00$c21,4.00-5.30$c01,-,-,-,1.30-2.30$lr2$lr3$c22$c23,-,-,-,-,-,-,-
 Mandatory,Discrete Mathematics,CSE121,Donghoon Chang,4,DM,-,1.30-3.00$c21,-,-,11.30-1.00$c21,-,-,4.00-5.30$s01,-,4.00-5.30$lr1$lr2$lr3,-,-,-,-,-
 HSS Elective,Introduction to Digital Ethonography,HSS2XX,Shriram Venkatraman,4,IDE,4.00-5.30$c11,-,4.00-5.30$c11,-,-,-,-,-,-,-,-,-,-,-,-
-HSS Elective,Introduction to Media In Society. A Public Sphere Approach,HSS2XX,Aasim Khan,4,IMS,-,4.00-5.30$c03,-,-,4.00-5.30$c03,-,-,-,-,-,-,-,-,-,-
+HSS Elective,Introduction to Media In Society,HSS2XX,Aasim Khan,4,IMS,-,4.00-5.30$c03,-,-,4.00-5.30$c03,-,-,-,-,-,-,-,-,-,-
 HSS Elective,Introduction to Poetry,HSS223A,Saumya Kulshreshtha(G),2,PO,-,4.30-6.00$c02,-,-,-,-,-,-,-,-,-,-,-,-,-
 HSS Elective,Introduction to Psychology,HSS204,Akshay Kumar(V),4,Psy,4.00-5.30$c01,-,4.00-5.30$c01,-,-,-,-,-,-,-,-,-,-,-,-
 HSS Elective,Introduction to Social Informatics,HSS2XX,Venkata Ratandeep Suri,4,ISI,-,4.00-5.30$c13,-,-,4.00-5.30$c13,-,-,-,-,-,-,-,-,-,-

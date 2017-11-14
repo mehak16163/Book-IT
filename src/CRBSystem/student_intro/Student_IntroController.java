@@ -23,7 +23,7 @@ public class Student_IntroController {
 	}
 	@FXML
 	private void viewPreReq() throws IOException {
-		Main.showPreReq();
+		Main.showPrereq();
 	}
 	@FXML
 	private void search() throws IOException {

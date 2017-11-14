@@ -54,7 +54,7 @@ public class Main extends Application {
 		primarystage.setScene(scene);
 		primarystage.show();
 	}
-	public static void showPreReq() throws IOException {
+	public static void showPrereq() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("student_intro/ViewPrereq.fxml"));
 		mainLayout = loader.load();

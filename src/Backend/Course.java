@@ -18,6 +18,53 @@ public class Course implements Serializable {
 	private static final long serialVersionUID = 5593581805536753765L;
 	private String name;
 	private String nature;
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getNature() {
+		return nature;
+	}
+
+	public String getAcro() {
+		return acro;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public Timetable getTime() {
+		return time;
+	}
+
+	public String getFac() {
+		return fac;
+	}
+
+	public HashMap<String, Student> getStudents() {
+		return students;
+	}
+
+	public HashMap<Integer, String> getPrereqs() {
+		return prereqs;
+	}
+
+	public static int getPrereq_count() {
+		return prereq_count;
+	}
+
+	public static int getPost_count() {
+		return post_count;
+	}
+
+	public HashMap<String, Integer> getPost() {
+		return post;
+	}
 	private String acro;
 	private String code;
 	private Timetable time;
