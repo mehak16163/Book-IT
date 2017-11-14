@@ -78,8 +78,9 @@ public class Respond_signup_controller {
 			SignUpRequest st =(SignUpRequest) SignUpRequest.deserialise("./src/Database/signup/"+x1[i]);
 			if(name.equals(st.getName())) {
 				ta.setText(st.getName() +" " + st.getEmail() +" " + st.getType() +" " + st.getPass());
+				break;
+
 			}
-			break;
 		}
 	}
 	@FXML
