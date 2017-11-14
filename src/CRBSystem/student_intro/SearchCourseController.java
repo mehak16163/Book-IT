@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.HashMap;
 
 import Backend.Course;
+import Backend.Student;
+import Backend.Timetable;
 import CRBSystem.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -20,6 +22,8 @@ public class SearchCourseController {
 	@FXML
 	private Label warning ; 
 	@FXML
+	private Label added;
+	@FXML
 	private TextField post;
 	@FXML
 	private ListView lw;
@@ -30,6 +34,7 @@ public class SearchCourseController {
 	private void goBack() throws IOException {
 		warning2.setVisible(false);
 		warning.setVisible(false);
+		added.setVisible(false);
 		list.clear();
 		Main.showStudentIntro();
 	}
@@ -63,6 +68,73 @@ public class SearchCourseController {
 		}
 		lw.setItems(list);
 		
+	}
+	
+	@FXML
+	private void addCourse() throws FileNotFoundException, ClassNotFoundException, IOException {
+		warning.setVisible(false);
+		warning2.setVisible(false);
+		added.setVisible(false);
+		Student s=null;
+		String c = name.getText();
+		if (c.equals("")) {
+			System.out.println("yo");
+			return;
+		}
+		else {
+			c = c.toLowerCase();
+			Student s1 = (Student)Main.getCurr();
+			File file = new File("./src/Database/students");
+			String[] x1 = file.list();
+			for(int y=0;y<x1.length;y++) {
+				 s =  Student.deserialise("./src/Database/students/"+x1[y]);
+				if (s.compareTo(s1)==1) {
+					break;
+				}
+			}
+			File f = new File("./src/Database/courses");
+			String[] x = f.list();
+			int i;
+			Course co = null;
+			for ( i=0;  i<x.length;i++) {
+				co = Course.deserialise("./src/Database/courses/"+x[i]);
+				if (co.getName().equals(c) ) {
+					break;
+				}
+			}
+			if (i==x.length) {
+				return;
+			}
+			if (s.getCourses().containsKey(co.getName())) {
+				warning2.setVisible(true);
+				return;
+			}
+			Timetable course_table = co.getTime();
+			Timetable student  = s.getTable();
+			for (int j=0; j<5;j++) {
+				for (int k=0 ; k<20 ; k++) {
+					System.out.println(course_table.table[j][k] + " " + student.table[j][k] );
+					if (course_table.table[j][k] == true && student.table[j][k] ==true) {
+						warning.setVisible(true); 
+						System.out.println(j + " " + k);
+						return;
+					}
+				}	
+			}
+			added.setVisible(true);
+			s.getCourses().put(co.getName(), co);
+			co.getStudents().put(s.getName(), s);
+			for (int j=0; j<5;j++) {
+				for (int k=0 ; k<20 ; k++) {
+					if (course_table.table[j][k] == true ) {
+						student.table[j][k]=true;
+					}
+				}	
+			}
+			
+			co.serialise();
+			s.serialise();
+		}
 	}
 	
 }

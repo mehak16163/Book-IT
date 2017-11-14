@@ -42,6 +42,11 @@
                   <Font size="19.0" />
                </font>
             </Label>
+            <Label fx:id="added" text="Course Added" visible="false">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="86.0" prefWidth="800.0" spacing="70.0">
@@ -73,7 +78,7 @@
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="70.0">
          <children>
             <Button mnemonicParsing="false" onAction="#goBack" stylesheets="@../../../stylesheets/button.css" text="&lt;&lt;Back" />
-            <Button mnemonicParsing="false" stylesheets="@../../../stylesheets/button.css" text="Add Course" />
+            <Button mnemonicParsing="false" onAction="#addCourse" stylesheets="@../../../stylesheets/button.css" text="Add Course" />
          </children>
       </HBox>
    </children>

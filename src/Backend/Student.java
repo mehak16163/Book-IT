@@ -59,11 +59,13 @@ public class Student extends User implements Comparable {
 		s_table = t;
 	}
 	
+	public Timetable getTable() {
+		return s_table;
+	}
 	
 	
 	
-	
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, ClassNotFoundException {
 		
 	}
 	public HashMap<Integer , Request > getRequests() {
