@@ -26,6 +26,7 @@ public class ViewPrereqController {
 	}
 	@FXML
 	private void prereq() throws FileNotFoundException, ClassNotFoundException, IOException {
+		result.setText("");
 		String n = name.getText();
 		if (n.equals("")) {
 			return;
