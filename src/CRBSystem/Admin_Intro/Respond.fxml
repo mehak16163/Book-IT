@@ -32,6 +32,11 @@
             </Label>
          </children>
       </HBox>
+      <HBox alignment="CENTER" prefHeight="42.0" prefWidth="800.0">
+         <children>
+            <Label fx:id="acce" text="Your request is accepted" visible="false" />
+         </children>
+      </HBox>
       <HBox alignment="CENTER" prefHeight="110.0" prefWidth="800.0">
          <children>
             <Button mnemonicParsing="false" onAction="#list" stylesheets="@../../../stylesheets/button.css" text="List Requests">

@@ -81,8 +81,8 @@ public class BookRoomController {
 		
 		
 		if (check) {
-			
-			Request req = new Request((Student)Main.getCurr(),purpose.getText(),room.getText(),Integer.parseInt(capacity.getText()),date.getValue() ,from.getText()+"-"+to.getText());
+			String time = from+"\\-"+to;
+			Request req = new Request((Student)Main.getCurr(),purpose.getText(),room.getText(),Integer.parseInt(capacity.getText()),date.getValue() ,time);
 			req.serialise();
 			id.setText(Integer.toString(req.getId()));
 			id.setVisible(false);

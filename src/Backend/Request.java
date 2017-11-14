@@ -135,8 +135,8 @@ public class Request implements Serializable , Comparable {
 		book.put("5.30", 19);
 		book.put("6.00", 20);
 		Room curr = this.room;
-		String start = time.split("//-")[0];
-		String end = time.split("//-")[1];
+		String start = time.split("\\-")[0];
+		String end = time.split("\\-")[1];
 		int st = book.get(start);
 		int en = book.get(end)-1;
 		String day = this.date.getDayOfWeek().name().toLowerCase();

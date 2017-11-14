@@ -16,10 +16,13 @@ import CRBSystem.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import java.time.temporal.ChronoUnit;
 public class Respond_Controller {
+	@FXML
+	private Label acce;
 	@FXML
 	private TextField id;
 	@FXML
@@ -34,6 +37,8 @@ public class Respond_Controller {
 
 	@FXML
 	private void list() throws FileNotFoundException, ClassNotFoundException, IOException {
+		list.clear();
+		acce.setVisible(false);
 		File file = new File("./src/Database/requests");
 		String[] x1 = file.list();
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
@@ -63,15 +68,18 @@ public class Respond_Controller {
 					continue;
 				}
 			}
-			String output = request.getId() + " " + request.getStudent().getName() + " " + request.getPurpose() + " " + request.getRoomname() + " " + request.getCapacity();
+			if (request.accepted==true) {
+				continue;
+			}
+			String output = request.getId() + " " + request.getStudent().getName() + " " + request.getPurpose() + " " + request.getRoomname() + " " + request.getCapacity()+" " + request.getDate().getDayOfWeek().name().toLowerCase();
 			list.add(output);
-			
 		}
 		lw.setItems(list);
 	}
 	
 	@FXML
 	private void accept() throws FileNotFoundException, ClassNotFoundException, IOException {
+		acce.setVisible(false);
 		if (id.getText().equals(""))
 			return;
 		if (room.getText().equals(""))
@@ -88,11 +96,13 @@ public class Respond_Controller {
 			}
 		}
 		request.accepted=true;
+		acce.setVisible(true);
+		
 		File file1 = new File("./src/Database/rooms");
 		String[] x2 = file1.list();
 		Room r = null;
 		for (int i=0;i<x2.length;i++) {
-			r = (Room) Room.deserialise("./src/Database/requests/"+x1[i]);
+			r = (Room) Room.deserialise("./src/Database/rooms/"+x2[i]);
 			if (r.getName().equals(room_)) {
 				break;
 			}
@@ -105,6 +115,7 @@ public class Respond_Controller {
 	
 	@FXML
 	public void reject() throws FileNotFoundException, ClassNotFoundException, IOException {
+		acce.setVisible(false);
 		if (id.getText().equals(""))
 			return;
 		int id_ = Integer.parseInt(id.getText());
