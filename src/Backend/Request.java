@@ -18,8 +18,8 @@ public class Request implements Serializable , Comparable {
 	private String purpose;
 	private int capacity;
 	private String roomname;
-	private Boolean accepted = false;
-	private Boolean valid ;
+	private boolean accepted = false;
+	private boolean valid ;
 	private Room room;
 	private String time;
 	private String day;

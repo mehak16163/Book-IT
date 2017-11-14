@@ -18,6 +18,8 @@ import javafx.scene.control.TextField;
 
 public class BookRoomController {
 	@FXML
+	private Label accept;
+	@FXML
 	private TextField name;
 	@FXML
 	private TextField day;
@@ -30,7 +32,7 @@ public class BookRoomController {
 	@FXML
 	private TextField capacity;
 	@FXML
-	private TextArea purpose;
+	private TextField purpose;
 	@FXML
 	private Label warning;
 	@FXML
@@ -89,6 +91,8 @@ public class BookRoomController {
 			id.setVisible(false);
 			Student s = Student.deserialise("./src/Database/students/"+Main.getCurr().getName()+".txt");
 			s.getRequests().put(req.getId(), req);
+			s.serialise();
+			accept.setVisible(true);
 		}
 	}
 }
