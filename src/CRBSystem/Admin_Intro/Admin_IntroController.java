@@ -36,4 +36,5 @@ public class Admin_IntroController {
 	private void viewreq() throws IOException {
 		Main.showRequests();
 	}
+	
 }

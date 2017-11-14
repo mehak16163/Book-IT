@@ -15,7 +15,6 @@ public class Faculty_IntroController {
 	@FXML
 	private   Label name;
 	@FXML
-	
 	private  Label email ;
 	
 	
@@ -27,6 +26,10 @@ public class Faculty_IntroController {
 	@FXML
 	private void logout() throws IOException {
 		Main.showMainPage();
+	}
+	@FXML
+	private void checkava() throws IOException {
+		Main.showAvailability();
 	}
 	
 	

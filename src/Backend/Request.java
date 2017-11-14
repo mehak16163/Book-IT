@@ -12,6 +12,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class Request implements Serializable , Comparable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3437465097933260821L;
 	static int counter =1;
 	private int id;
 	private Student student;
@@ -37,7 +41,9 @@ public class Request implements Serializable , Comparable {
 		LocalDate localDate = LocalDate.now();
 		date = dtf.format(localDate); 
 	}
-	
+	public int getCapacity() {
+		return capacity;
+	}
 	public void serialise() throws FileNotFoundException, IOException {
 		ObjectOutputStream out=null;
 		try {

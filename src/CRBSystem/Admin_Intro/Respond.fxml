@@ -58,6 +58,7 @@
                   <Font size="22.0" />
                </font>
             </Button>
+            <Button mnemonicParsing="false" onAction="#goback" stylesheets="@../../../stylesheets/button.css" text="&lt;&lt;Back" />
          </children>
       </HBox>
    </children>
