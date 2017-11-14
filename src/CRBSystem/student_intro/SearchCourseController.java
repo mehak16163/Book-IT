@@ -16,6 +16,21 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
+
+/**
+*
+* <h1> Respond to SignUp Requests</h1>
+* <p>This class basically contains methods and functions that help the admin to react to signup requests ,accept them or reject as well as show the details of various people who have signed up.</p>
+*
+*
+* @author Mehak Gupta
+* @author Pankhuri Kasliwal
+* @version 1.0
+* @since November 3, 2017
+*
+*
+*/
+
 public class SearchCourseController {
 	@FXML
 	private Label warning2;
@@ -31,6 +46,15 @@ public class SearchCourseController {
 	@FXML
 	private TextField name;
 	@FXML
+
+	/**
+	*
+	* <p>  </p>
+	* @throws IOException If an input or output exception occured.
+	*
+	*
+	*
+	*/
 	private void goBack() throws IOException {
 		warning2.setVisible(false);
 		warning.setVisible(false);
@@ -39,6 +63,16 @@ public class SearchCourseController {
 		Main.showStudentIntro();
 	}
 	@FXML
+
+	/**
+	*
+	* <p> Method for searching courses. </p>
+	* @throws FileNotFoundException
+	* @throws ClassNotFoundException
+	* @throws IOException If an input or output exception occured.
+	*
+	*
+	*/
 	private void search() throws FileNotFoundException, ClassNotFoundException, IOException {
 		list.clear();
 		warning2.setVisible(false);
@@ -71,6 +105,18 @@ public class SearchCourseController {
 	}
 	
 	@FXML
+
+	/**
+	*
+	*
+	*
+	* <p> Method to add courses to the student Database. </p>
+	* @throws FileNotFoundException
+	* @throws ClassNotFoundException
+	* @throws IOException If an input or output exception occured
+    *
+	*
+	*/
 	private void addCourse() throws FileNotFoundException, ClassNotFoundException, IOException {
 		warning.setVisible(false);
 		warning2.setVisible(false);

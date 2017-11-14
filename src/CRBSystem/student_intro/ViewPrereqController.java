@@ -13,6 +13,17 @@ import CRBSystem.Main;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
+/**
+*
+* <h1> View Pre-Requisites </h1>
+* <p> This class is the controller class for viewing pre-requisites for a course. </p>
+* 
+* @author Mehak Gupta
+* @author Pankhuri Kasliwal
+* @version 1.0
+* @since November 2, 2017
+*/
+
 public class ViewPrereqController {
 	@FXML
 	private TextField code;
@@ -21,10 +32,29 @@ public class ViewPrereqController {
 	@FXML
 	private TextField result;
 	@FXML
+
+	/**
+	*
+	*
+	* <p>This function acts on the back button and upon ction the student intro page is displayed. </p>
+	* @throws IOException If an input or output exception occurs.
+	*/
+
 	private void goback() throws IOException {
 		Main.showStudentIntro();
 	}
 	@FXML
+
+	/**
+	*
+	*
+	* <p> This method displays the pre-requisites of the required course. </p>
+	* @throws FileNotFoundException
+	* @throws ClassNotFoundException
+	* @throws IOException If an input or output exception occurs.
+	*
+	*/
+
 	private void prereq() throws FileNotFoundException, ClassNotFoundException, IOException {
 		result.setText("");
 		String n = name.getText();

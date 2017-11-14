@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"CRBSystem.student_intro","c":"ViewPrereqController","l":"ViewPrereqController()"}]
