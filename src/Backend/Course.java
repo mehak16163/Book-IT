@@ -26,7 +26,7 @@ public class Course implements Serializable {
 	private HashMap<Integer,String > prereqs = new HashMap<>();
 	private static int prereq_count=0;
 	private static int post_count =0;
-	private HashMap<Integer , String> post = new HashMap<>();
+	private HashMap<String , Integer> post = new HashMap<>();
 	
 	public Course(String na,String n , String a,String c ,Timetable t , String f ) {
 		code =c;
@@ -142,7 +142,7 @@ public class Course implements Serializable {
 			c.prereq_count = 1;
 			String[] post = line1[7].split(" ");
 			for (int g=0;g<post.length;g++) {
-				c.post.put(g+1, post[g]);
+				c.post.put(post[g] , g+1);
 				c.post_count++;
 			}
 			c.serialise();
