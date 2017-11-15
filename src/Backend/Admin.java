@@ -10,6 +10,23 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashMap;
 
+
+
+
+     /**
+	 * 
+     * <h1> Validation </h1>
+     * <p> This class Admin extends User class and implements Comparable interface methods and creates objects for Admin. </p>
+     * @author Mehak Gupta
+     * @author Pankhuri Kasliwal
+     * @version 1.0
+     * @since November 11, 2017
+	 *
+	 *
+	 *
+	 *
+	 *
+	 */
 public class Admin extends User implements Comparable {
 	private static HashMap<Integer , Request> requests = new HashMap<>();
 	private static HashMap<Integer , SignUpRequest> signupreq = new HashMap<>();
@@ -24,6 +41,15 @@ public class Admin extends User implements Comparable {
 		}
 		else return 0;
 	}
+
+	/**
+	*
+	* <p> Method that is used to create serialisable objects. </p>
+	* @throws FileNotFoundException
+	* @throws IOException If an input or output exception occured
+	*
+	*
+	*/
 	public void serialise() throws FileNotFoundException, IOException {
 		ObjectOutputStream out=null;
 		try {
@@ -35,6 +61,15 @@ public class Admin extends User implements Comparable {
 		}
 	}
 
+
+    /**
+	*
+	* <p> Method used to deserialise the object. </p>
+	* @throws FileNotFoundException
+	* @throws IOException If an input or output exception occured
+	* @throws ClassNotFoundException
+	*
+	*/
 	public static Admin deserialise(String x) throws FileNotFoundException, IOException, ClassNotFoundException {
 		ObjectInputStream in =null;
 		Admin s1;

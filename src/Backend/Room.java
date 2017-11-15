@@ -11,10 +11,22 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.HashMap;
 
-public class Room implements Serializable{
-	/**
+
+
+
+
+/**
 	 * 
+     * <h1> Room </h1>
+     * <p> Class that implements Serialisable and creates serialisable objects for different rooms. </p>
+     * @author Mehak Gupta
+     * @author Pankhuri Kasliwal
+     * @version 1.0
+     * @since November 12, 2017
+	 *
 	 */
+public class Room implements Serializable{
+	
 	private static final long serialVersionUID = 5335174260195498233L;
 	private String name;
 	private Timetable bookings;
@@ -34,6 +46,15 @@ public class Room implements Serializable{
 		capacity =c;
 	}
 	
+
+	/**
+	*
+	* <p> Method that is used to create serialisable objects. </p>
+	* @throws FileNotFoundException
+	* @throws IOException If an input or output exception occured
+	*
+	*
+	*/
 	public void serialise() throws FileNotFoundException, IOException {
 		ObjectOutputStream out=null;
 		try {
@@ -44,6 +65,16 @@ public class Room implements Serializable{
 			out.close();
 		}
 	}
+
+
+	/**
+	*
+	* <p> Method used to deserialise the object. </p>
+	* @throws FileNotFoundException
+	* @throws IOException If an input or output exception occured
+	* @throws ClassNotFoundException
+	*
+	*/
 	public static Object deserialise(String x) throws FileNotFoundException, IOException, ClassNotFoundException {
 		ObjectInputStream in =null;
 		Room s1;

@@ -16,10 +16,23 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.HashMap;
 
-public class Request implements Serializable , Comparable {
-	/**
+     /**
 	 * 
+     * <h1> Booking Requests </h1>
+     * <p> This class has methods that manages booking requests and are required for cancellation of bookings, add bookings,etc. </p>
+     * @author Mehak Gupta
+     * @author Pankhuri Kasliwal
+     * @version 1.0
+     * @since November 10, 2017
+	 *
+	 *
+	 *
+	 *
+	 *
 	 */
+
+public class Request implements Serializable , Comparable {
+	
 	private static final long serialVersionUID = 3437465097933260821L;
 	static int counter =1;
 	private int id;
@@ -48,6 +61,15 @@ public class Request implements Serializable , Comparable {
 	public int getCapacity() {
 		return capacity;
 	}
+
+	/**
+	*
+	* <p> Method that is used to create serialisable objects. </p>
+	* @throws FileNotFoundException
+	* @throws IOException If an input or output exception occured
+	*
+	*
+	*/
 	public void serialise() throws FileNotFoundException, IOException {
 		ObjectOutputStream out=null;
 		try {
@@ -58,6 +80,15 @@ public class Request implements Serializable , Comparable {
 			out.close();
 		}
 	}
+
+	/**
+	*
+	* <p> Method used to deserialise the object. </p>
+	* @throws FileNotFoundException
+	* @throws IOException If an input or output exception occured
+	* @throws ClassNotFoundException
+	*
+	*/
 	public static Request deserialise(String x) throws FileNotFoundException, IOException, ClassNotFoundException {
 		ObjectInputStream in =null;
 		Request s1;
@@ -73,32 +104,90 @@ public class Request implements Serializable , Comparable {
 		return s1;
 	}
 	
+	/**
+	*
+	* <p> Getter Method </p>
+	* @return Returns counter 
+	*
+	*
+	*
+	*/
 	public static int getCounter() {
 		return counter;
 	}
+
+	/**
+	*
+	* <p> Getter Method </p>
+	* @return Returns id of the user 
+	*/
 	public int getId() {
 		return id;
 	}
+
+	/**
+	*
+	* <p> Getter Method </p>
+	* @return Returns Student object 
+	*
+	*
+	*/
 	public Student getStudent() {
 		return student;
 	}
+
+	/**
+	*
+	* <p> Getter Method </p>
+	* @return Returns Purpose 
+	*
+	*/
 	public String getPurpose() {
 		return purpose;
 	}
+
+	/**
+	*
+	* <p> Getter Method </p>
+	* @return Returns roomname 
+	*
+	*/
 	public String getRoomname() {
 		return roomname;
 	}
+
+	/**
+	*
+	* <p> Getter Method </p>
+	* @return Returns boolean value of accepted
+	*/
 	public Boolean getAccepted() {
 		return accepted;
 	}
 	
+	/**
+	*
+	* <p> Getter Method </p>
+	* @return Returns date 
+	*/
 	public LocalDate getDate() {
 		return date;
 	}
+
+	/**
+	*
+	* <p> Getter Method </p>
+	* @return Returns requested date 
+	*/
 	public LocalDate getreqdate() {
 		return reqdate;
 	}
 	
+	/**
+	*
+	* <p> Setter Method </p>
+	* 
+	*/
 	public void setRoom(Room r) {
 		room = r;
 	}
@@ -111,6 +200,15 @@ public class Request implements Serializable , Comparable {
 		return 0;
 	}
 	
+
+	/**
+	*
+	* <p> Method that takes care of that when a booking request for a room is accepted then for that time duration the boolean variable is made true and room is shown as booked. </p>
+	* @throws FileNotFoundException
+	* @throws IOException If an input or output exception occured
+    *
+    *
+	*/
 	public void add() throws FileNotFoundException, IOException {
 		HashMap<String , Integer> book = new HashMap<>();
 		book.put("8.00", 0);
@@ -156,6 +254,17 @@ public class Request implements Serializable , Comparable {
 		s.getRequests().put(id, this);
 		s.serialise();
 	}
+	
+
+
+	/**
+	*
+	* <p> Method that takes care of that when a cancellation request for a room is accepted then for that time duration the boolean variable is made false and room is shown as free. </p>
+	* @throws FileNotFoundException
+	* @throws IOException If an input or output exception occured
+    *
+    *
+	*/
 	public void remove() throws FileNotFoundException, IOException {
 		HashMap<String , Integer> book = new HashMap<>();
 		book.put("8.00", 0);

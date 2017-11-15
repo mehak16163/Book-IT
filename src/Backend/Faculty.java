@@ -10,7 +10,24 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashMap;
 
-public class Faculty extends User implements Comparable{
+
+
+     /**
+	 * 
+     * <h1> Booking Requests </h1>
+     * <p> This class Faculty extends User class and implements Comparable interface methods and creates objects for Faculty. </p>
+     * @author Mehak Gupta
+     * @author Pankhuri Kasliwal
+     * @version 1.0
+     * @since November 11, 2017
+	 *
+	 *
+	 *
+	 *
+	 *
+	 */
+
+    public class Faculty extends User implements Comparable{
 	private Timetable f_table=new Timetable(new boolean[6][20]);
 	private HashMap<String , Course> courses = new HashMap<>();
 	public Faculty(String n ,String e ,String p) {
@@ -27,6 +44,15 @@ public class Faculty extends User implements Comparable{
 		}
 		else return 0;
 	}
+
+	/**
+	*
+	* <p> Method that is used to create serialisable objects. </p>
+	* @throws FileNotFoundException
+	* @throws IOException If an input or output exception occured
+	*
+	*
+	*/
 	public void serialise() throws FileNotFoundException, IOException {
 		ObjectOutputStream out=null;
 		try {
@@ -38,6 +64,15 @@ public class Faculty extends User implements Comparable{
 		}
 	}
 	
+
+	/**
+	*
+	* <p> Method used to deserialise the object. </p>
+	* @throws FileNotFoundException
+	* @throws IOException If an input or output exception occured
+	* @throws ClassNotFoundException
+	*
+	*/
 	public static Faculty deserialise(String x) throws FileNotFoundException, IOException, ClassNotFoundException {
 		ObjectInputStream in =null;
 		Faculty s1;

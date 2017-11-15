@@ -8,15 +8,21 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-public class SignUpRequest implements Serializable {
-	/**
+
+
+/**
 	 * 
+     * <h1> SignUp Request </h1>
+     * <p> Class that implements Serialisable and creates serialisable objects. </p>
+     * @author Mehak Gupta
+     * @author Pankhuri Kasliwal
+     * @version 1.0
+     * @since November 12, 2017
+	 *
 	 */
+public class SignUpRequest implements Serializable {
 	private static final long serialVersionUID = -8312553311027397734L;
 
-	/**
-	 * 
-	 */
 
 	public String getName() {
 		return name;
@@ -41,6 +47,16 @@ public class SignUpRequest implements Serializable {
 		pass = p;
 		type =t;
 	}
+
+
+	/**
+	*
+	* <p> Method that is used to create serialisable objects. </p>
+	* @throws FileNotFoundException
+	* @throws IOException If an input or output exception occured
+	*
+	*
+	*/
 	public void serialise() throws FileNotFoundException, IOException {
 		ObjectOutputStream out=null;
 		try {
@@ -51,6 +67,16 @@ public class SignUpRequest implements Serializable {
 			out.close();
 		}
 	}
+
+
+	/**
+	*
+	* <p> Method used to deserialise the object. </p>
+	* @throws FileNotFoundException
+	* @throws IOException If an input or output exception occured
+	* @throws ClassNotFoundException
+	*
+	*/
 	public static Object deserialise(String x) throws FileNotFoundException, IOException, ClassNotFoundException {
 		ObjectInputStream in =null;
 		SignUpRequest s1;

@@ -11,10 +11,24 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.HashMap;
 
-public class Course implements Serializable {
-	/**
+
+
+     /**
 	 * 
+     * <h1> Booking Requests </h1>
+     * <p> Course class that creates various courses. </p>
+     * @author Mehak Gupta
+     * @author Pankhuri Kasliwal
+     * @version 1.0
+     * @since November 11, 2017
+	 *
+	 *
+	 *
+	 *
+	 *
 	 */
+public class Course implements Serializable {
+	
 	private static final long serialVersionUID = 5593581805536753765L;
 	private String name;
 	private String nature;
@@ -74,7 +88,13 @@ public class Course implements Serializable {
 	private static int prereq_count=0;
 	private static int post_count =0;
 	private HashMap<String , Integer> post = new HashMap<>();
-	
+
+
+	/**
+	* <p> Constructor </p>
+	*
+	*
+	*/
 	public Course(String na,String n , String a,String c ,Timetable t , String f ) {
 		code =c;
 		fac =f;
@@ -84,6 +104,14 @@ public class Course implements Serializable {
 		nature =n;
 	}
 	
+	/**
+	*
+	* <p> Method that is used to create serialisable objects. </p>
+	* @throws FileNotFoundException
+	* @throws IOException If an input or output exception occured
+	*
+	*
+	*/
 	public void serialise() throws FileNotFoundException, IOException {
 		ObjectOutputStream out=null;
 		try {
@@ -95,6 +123,14 @@ public class Course implements Serializable {
 		}
 	}
 	
+	/**
+	*
+	* <p> Method used to deserialise the object. </p>
+	* @throws FileNotFoundException
+	* @throws IOException If an input or output exception occured
+	* @throws ClassNotFoundException
+	*
+	*/
 	public static Course deserialise(String x) throws FileNotFoundException, IOException, ClassNotFoundException {
 		ObjectInputStream in =null;
 		Course s1;

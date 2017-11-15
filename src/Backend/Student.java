@@ -10,6 +10,22 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashMap;
 
+
+
+ /**
+	 * 
+     * <h1> Student  </h1>
+     * <p> This class Student extends User class and implements Comparable interface methods and creates objects for Students. </p>
+     * @author Mehak Gupta
+     * @author Pankhuri Kasliwal
+     * @version 1.0
+     * @since November 11, 2017
+	 *
+	 *
+	 *
+	 *
+	 *
+	 */
 public class Student extends User implements Comparable {
 	private Timetable s_table = new Timetable(new boolean[6][20]) ;
 	static int num_course =0;
@@ -29,6 +45,14 @@ public class Student extends User implements Comparable {
 		else return 0;
 	}
 	
+	/**
+	*
+	* <p> Method that is used to create serialisable objects. </p>
+	* @throws FileNotFoundException
+	* @throws IOException If an input or output exception occured
+	*
+	*
+	*/
 	public void serialise() throws FileNotFoundException, IOException {
 		ObjectOutputStream out=null;
 		try {
@@ -39,7 +63,16 @@ public class Student extends User implements Comparable {
 			out.close();
 		}
 	}
+
 	
+	/**
+	*
+	* <p> Method used to deserialise the object. </p>
+	* @throws FileNotFoundException
+	* @throws IOException If an input or output exception occured
+	* @throws ClassNotFoundException
+	*
+	*/
 	public static Student deserialise(String x) throws FileNotFoundException, IOException, ClassNotFoundException {
 		ObjectInputStream in =null;
 		Student s1;
