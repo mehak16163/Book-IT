@@ -173,7 +173,7 @@ public class Main extends Application {
 	}
 	public static void showFacBooking() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(Main.class.getResource("FacultyIntro/ViewBookings"));
+		loader.setLocation(Main.class.getResource("FacultyIntro/ViewBookings.fxml"));
 		mainLayout = loader.load();
 		Scene scene = new Scene(mainLayout);
 		primarystage.setTitle("Booking Requests");
