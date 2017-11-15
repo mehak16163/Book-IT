@@ -25,6 +25,8 @@ public class Main extends Application {
 		primarystage.setTitle("BookIT - Classroom Booking Application");
 		showMainPage();
 	}
+	
+	
 	public static void showMainPage() throws IOException {
 		setCurr(null);
 		FXMLLoader loader = new FXMLLoader();
@@ -189,13 +191,40 @@ public class Main extends Application {
 		primarystage.setScene(scene);
 		primarystage.show();
 	}
+	public static void showReq() throws IOException {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("student_intro/View_Bookings.fxml"));
+		mainLayout = loader.load();
+		Scene scene = new Scene(mainLayout);
+		primarystage.setTitle("View Bookings");
+		primarystage.setScene(scene);
+		primarystage.show();
+	}
 	
+	public static void gotobook() throws IOException {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("FacultyIntro/Fac_cancel.fxml"));
+		mainLayout = loader.load();
+		Scene scene = new Scene(mainLayout);
+		primarystage.setTitle("Room Booking");
+		primarystage.setScene(scene);
+		primarystage.show();
+	}
 	public static void showBookStudent() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("student_intro/BookRoom.fxml"));
 		mainLayout = loader.load();
 		Scene scene = new Scene(mainLayout);
 		primarystage.setTitle("Room Booking");
+		primarystage.setScene(scene);
+		primarystage.show();
+	}
+	
+	public static void showCancel() throws IOException {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("CancelBooking/Cancel.fxml"));
+		mainLayout = loader.load();
+		Scene scene = new Scene(mainLayout);
 		primarystage.setScene(scene);
 		primarystage.show();
 	}

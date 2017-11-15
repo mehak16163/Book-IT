@@ -45,17 +45,18 @@ public class Faculty_IntroController {
 		email.setText(a.getEmail());
 	}
 	
-	@FXML
+
 
 	/**
 	*
 	* @throws IOException If an input or output exception occured
 	*
 	*/
+	@FXML
 	private void logout() throws IOException {
 		Main.showMainPage();
 	}
-	@FXML
+	
 
 	/**
 	*
@@ -63,8 +64,17 @@ public class Faculty_IntroController {
 	* @throws IOException If an input or output exception occured
     *
     */
+	@FXML
 	private void checkava() throws IOException {
 		Main.showAvailability();
+	}
+	@FXML
+	private void gotocancel() throws IOException {
+		Main.showCancel();
+	}
+	
+	@FXML private void gotoBook() throws IOException {
+		Main.gotobook();
 	}
 	
 	

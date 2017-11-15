@@ -28,7 +28,7 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label alignment="CENTER" prefHeight="64.0" prefWidth="286.0" text="Cancel Booking">
+            <Label alignment="CENTER" prefHeight="68.0" prefWidth="327.0" text="Cancel Booking">
                <font>
                   <Font name="AR ESSENCE" size="46.0" />
                </font>
@@ -76,7 +76,7 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label fx:id="result" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="245.0" text="Label" visible="false" />
+            <Label fx:id="result" alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="245.0" text="Booking Cancelled" visible="false" />
          </children>
       </HBox>
       <HBox alignment="CENTER_RIGHT" prefHeight="146.0" prefWidth="800.0">

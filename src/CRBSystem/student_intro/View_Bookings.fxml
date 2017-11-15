@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRBSystem.student_intro.ViewBookingController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Label text="View Bookings">
+               <font>
+                  <Font name="Comic Sans MS" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="35.0" prefWidth="800.0" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#showBookings" prefHeight="68.0" prefWidth="479.0" stylesheets="@../../../stylesheets/button.css" text="Click to View">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="214.0" prefWidth="800.0">
+         <children>
+            <ListView fx:id="lw" prefHeight="237.0" prefWidth="321.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#back" stylesheets="@../../../stylesheets/button.css" text="&lt;&lt;Back">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

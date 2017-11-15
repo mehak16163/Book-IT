@@ -23,5 +23,9 @@ public class Book_Cancel_Controller {
 	public void checkava() throws IOException {
 		Main.showAvailability();
 	}
+	@FXML
+	public void ViewBooking() throws IOException {
+		Main.showReq();
+	}
 	
 }

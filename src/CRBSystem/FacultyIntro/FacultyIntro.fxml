@@ -80,12 +80,12 @@
                         <DropShadow />
                      </effect>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="64.0" prefWidth="254.0" style="-fx-font-size: 24;" stylesheets="@../../../stylesheets/button.css" text="Book a Room" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                  <Button mnemonicParsing="false" onAction="#gotoBook" prefHeight="64.0" prefWidth="254.0" style="-fx-font-size: 24;" stylesheets="@../../../stylesheets/button.css" text="Book a Room" GridPane.columnIndex="1" GridPane.columnSpan="2">
                      <effect>
                         <DropShadow />
                      </effect>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="68.0" prefWidth="247.0" style="-fx-font-size: 24;" stylesheets="@../../../stylesheets/button.css" text="Cancel Booking" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <Button mnemonicParsing="false" onAction="#gotocancel" prefHeight="68.0" prefWidth="247.0" style="-fx-font-size: 24;" stylesheets="@../../../stylesheets/button.css" text="Cancel Booking" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <effect>
                         <DropShadow />
                      </effect>

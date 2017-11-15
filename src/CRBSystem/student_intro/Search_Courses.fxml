@@ -67,7 +67,7 @@
       <HBox alignment="CENTER" prefHeight="163.0" prefWidth="800.0" spacing="30.0">
          <children>
             <ListView fx:id="lw" prefHeight="163.0" prefWidth="288.0" />
-            <Label text="Enter Course Code">
+            <Label text="Enter Course Name">
                <font>
                   <Font size="24.0" />
                </font>

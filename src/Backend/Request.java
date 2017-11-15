@@ -249,10 +249,7 @@ public class Request implements Serializable , Comparable {
 			curr.getTimeTable().table[day_int][i] = true;
 		}
 		curr.serialise();
-		Student s = this.student;
-		s.getRequests().remove(id);
-		s.getRequests().put(id, this);
-		s.serialise();
+		
 	}
 	
 
@@ -305,9 +302,7 @@ public class Request implements Serializable , Comparable {
 			curr.getTimeTable().table[day_int][i] = false;
 		}
 		curr.serialise();
-		Student s = this.student;
-		s.getRequests().remove(id);
-		s.serialise();
+		
 		File f = new File("./src/Database/requests/"+id+".txt");
 		f.delete();
 	}

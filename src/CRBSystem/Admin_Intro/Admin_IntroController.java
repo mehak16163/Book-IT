@@ -19,7 +19,10 @@ public class Admin_IntroController {
 		name.setText(a.getName());
 		email.setText(a.getEmail());
 	}
-	
+	@FXML
+	private void gotocancel() throws IOException {
+		Main.showCancel();
+	}
 	@FXML
 	private void logout() throws IOException {
 		Main.showMainPage();

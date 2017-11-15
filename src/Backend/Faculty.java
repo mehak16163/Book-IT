@@ -30,12 +30,16 @@ import java.util.HashMap;
     public class Faculty extends User implements Comparable{
 	private Timetable f_table=new Timetable(new boolean[6][20]);
 	private HashMap<String , Course> courses = new HashMap<>();
+	private HashMap<Integer , Request> requests = new HashMap<>();
 	public Faculty(String n ,String e ,String p) {
 		super(n,e,p);
 	}
 	
 	public void setTable(Timetable t) {
 		f_table = t;
+	}
+	public  HashMap<Integer , Request> getRequest(){
+		return requests;
 	}
 	public int compareTo(Object t) {
 		Faculty s = (Faculty)t;

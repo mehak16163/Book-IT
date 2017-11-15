@@ -1,35 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
-<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRBSystem.FacultyIntro.Fac_cancelController">
    <children>
-      <FlowPane prefHeight="89.0" prefWidth="800.0">
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <ImageView fitHeight="91.0" fitWidth="227.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/App_Name.PNG" />
-               </image>
-               <FlowPane.margin>
-                  <Insets left="15.0" top="15.0" />
-               </FlowPane.margin>
-            </ImageView>
-         </children>
-      </FlowPane>
-      <HBox alignment="CENTER" prefHeight="68.0" prefWidth="800.0">
-         <children>
-            <Label alignment="CENTER" prefHeight="75.0" prefWidth="399.0" text="Book A Room" textAlignment="CENTER">
+            <Label text="New Booking">
                <font>
-                  <Font name="AR ESSENCE" size="57.0" />
+                  <Font name="Comic Sans MS" size="45.0" />
                </font>
             </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="33.0" prefWidth="800.0">
+         <children>
+            <Label fx:id="confirm" text="Booking Confirmed" visible="false">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="warning" text="Enter Correct Details" textFill="#f80e0e" visible="false">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="22.0" prefWidth="800.0" spacing="70.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="31.0" prefWidth="248.0" text="Name">
+               <font>
+                  <Font name="Comic Sans MS" size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" prefHeight="31.0" prefWidth="238.0" promptText="Enter Name" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="59.0" prefWidth="600.0" stylesheets="@../../../Downloads/Classroom-Booking-System-master/stylesheets/Hbox.css">
@@ -47,13 +57,23 @@
                   <Insets />
                </HBox.margin>
             </TextField>
-            <TextField prefHeight="31.0" prefWidth="48.0" />
+            <TextField fx:id="from" prefHeight="31.0" prefWidth="48.0" />
             <TextField alignment="CENTER" prefHeight="27.0" prefWidth="44.0" text="To">
                <HBox.margin>
                   <Insets left="50.0" />
                </HBox.margin>
             </TextField>
-            <TextField prefHeight="31.0" prefWidth="69.0" />
+            <TextField fx:id="to" prefHeight="31.0" prefWidth="69.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="57.0" prefWidth="800.0">
+         <children>
+            <Label prefHeight="37.0" prefWidth="191.0" text="BookingDate">
+               <font>
+                  <Font name="Comic Sans MS" size="22.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="date" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="58.0" prefWidth="600.0" spacing="70.0" stylesheets="@../../../Downloads/Classroom-Booking-System-master/stylesheets/Hbox.css">
@@ -66,7 +86,7 @@
                   <Insets left="100.0" />
                </HBox.margin>
             </Label>
-            <TextField prefHeight="27.0" prefWidth="175.0" promptText="Enter room to be booked">
+            <TextField fx:id="room" prefHeight="27.0" prefWidth="175.0" promptText="Enter room to be booked">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -83,7 +103,7 @@
                   <Insets left="100.0" />
                </HBox.margin>
             </Label>
-            <TextField promptText="Enter email id">
+            <TextField fx:id="eid" promptText="Enter email id">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -100,7 +120,7 @@
                   <Insets />
                </HBox.margin>
             </Label>
-            <TextField promptText="Enter Capacity">
+            <TextField fx:id="capacity" promptText="Enter Capacity">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -109,12 +129,12 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="78.0" prefWidth="600.0" spacing="75.0">
          <children>
-            <Button alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="68.0" prefWidth="176.0" stylesheets="@../../../stylesheets/button.css" text="&lt;&lt;Back">
+            <Button alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#back" prefHeight="68.0" prefWidth="176.0" stylesheets="@../../../stylesheets/button.css" text="&lt;&lt;Back">
                <font>
                   <Font name="Comic Sans MS" size="19.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" stylesheets="@../../../stylesheets/button.css" text="Reset">
+            <Button mnemonicParsing="false" onAction="#reset" stylesheets="@../../../stylesheets/button.css" text="Reset">
                <font>
                   <Font name="Comic Sans MS" size="19.0" />
                </font>
@@ -122,7 +142,7 @@
                   <Insets />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" stylesheets="@../../../stylesheets/button.css" text="Submit">
+            <Button mnemonicParsing="false" onAction="#submit" stylesheets="@../../../stylesheets/button.css" text="Submit">
                <font>
                   <Font name="Comic Sans MS" size="19.0" />
                </font>
@@ -131,13 +151,10 @@
                </HBox.margin>
             </Button>
          </children>
-         <VBox.margin>
-            <Insets />
-         </VBox.margin>
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button mnemonicParsing="false" stylesheets="@../../../stylesheets/button.css" text="Logout" />
+            <Button mnemonicParsing="false" onAction="#log" stylesheets="@../../../stylesheets/button.css" text="Logout" />
          </children>
       </HBox>
    </children>

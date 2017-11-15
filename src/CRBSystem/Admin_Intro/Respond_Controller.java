@@ -57,6 +57,9 @@ public class Respond_Controller {
 			if (localDate.isAfter(request.getDate())) {
 				if (request.getAccepted()==true) {
 					request.remove();
+					Student s = request.getStudent();
+					s.getRequests().remove(id);
+					s.serialise();
 					continue;
 				}
 				else {
@@ -110,6 +113,10 @@ public class Respond_Controller {
 		request.setRoom(r);
 		request.serialise();
 		request.add();
+		Student s = request.getStudent();
+		s.getRequests().remove(request.getId());
+		s.getRequests().put(request.getId(), request);
+		s.serialise();
 		
 	}
 	
