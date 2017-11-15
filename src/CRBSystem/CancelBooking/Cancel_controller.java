@@ -45,10 +45,9 @@ public class Cancel_controller {
 	   String[] x1 = f.list();
 	   int i;
 	   for ( i=0; i<x1.length;i++) {
-		   String x = x1[i];
-		   Request req = Request.deserialise("./src/Database/requests/"+x1[i]+".txt");
+		   Request req = Request.deserialise("./src/Database/requests/"+x1[i]);
 		   if (req.getId()==Integer.parseInt(id.getText())) {
-			   File f1 = new File("./src/Database/requests/"+x1[i]+".txt");
+			   File f1 = new File("./src/Database/requests/"+x1[i]);
 			   f1.delete();
 			   result.setText("Request has been cancelled");
 			   if(req.accepted==true) {

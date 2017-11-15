@@ -54,6 +54,7 @@ public class BookingController {
 	*
 	*/
 	private void checkrooms() throws FileNotFoundException, ClassNotFoundException, IOException {
+		list.clear();
 		String start = from.getText();
 		String end = to.getText();
 		String day_week = day.getText().toLowerCase();
