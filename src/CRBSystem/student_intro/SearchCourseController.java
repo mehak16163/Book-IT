@@ -159,10 +159,8 @@ public class SearchCourseController {
 			Timetable student  = s.getTable();
 			for (int j=0; j<5;j++) {
 				for (int k=0 ; k<20 ; k++) {
-					System.out.println(course_table.table[j][k] + " " + student.table[j][k] );
 					if (course_table.table[j][k] == true && student.table[j][k] ==true) {
 						warning.setVisible(true); 
-						System.out.println(j + " " + k);
 						return;
 					}
 				}	
