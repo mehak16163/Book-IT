@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"Backend","c":"User","l":"getEmail()"},{"p":"Backend","c":"User","l":"getName()"},{"p":"Backend","c":"User","l":"password"},{"p":"Backend","c":"User","l":"User(String, String, String)","url":"User-java.lang.String-java.lang.String-java.lang.String-"}]

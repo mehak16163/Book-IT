@@ -16,6 +16,22 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
+
+
+    /**
+	 * 
+     * <h1> Booking Controller </h1>
+     * <p> Controller for Bookings. </p>
+     * @author Mehak Gupta
+     * @author Pankhuri Kasliwal
+     * @version 1.0
+     * @since November 14, 2017
+	 *
+	 *
+	 *
+	 *
+	 *
+	 */
 public class BookingController {
 	@FXML 
 	private ListView lw;
@@ -27,6 +43,16 @@ public class BookingController {
 	@FXML
 	private TextField day;
 	@FXML
+
+
+	/**
+	*
+	* <p> Method that notifies the rooms that are availaible for booking for a particular time sot. <p/>
+	* @throws IOException If an input or output exception occured 
+	* @throws ClassNotFoundException
+	* @throws FileNotFoundException
+	*
+	*/
 	private void checkrooms() throws FileNotFoundException, ClassNotFoundException, IOException {
 		String start = from.getText();
 		String end = to.getText();
@@ -85,6 +111,13 @@ public class BookingController {
 		}
 	}
 	@FXML
+
+	/**
+	*
+	* <p> Acts on back button. <p/>
+	* @throws IOException If an input or output exception occured 
+	*
+	*/
 	private void back() throws IOException {
 		if (Main.getCurr() instanceof Admin)
 			Main.showAdminIntro();

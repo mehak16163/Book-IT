@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"CRBSystem.ViewRooms","l":"BookingController"}]

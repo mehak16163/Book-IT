@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"CRBSystem.FacultyIntro","c":"Faculty_IntroController","l":"Faculty_IntroController()"},{"p":"CRBSystem.FacultyIntro","c":"Faculty_IntroController","l":"setScreen(User)","url":"setScreen-Backend.User-"}]
