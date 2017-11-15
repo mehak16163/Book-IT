@@ -75,7 +75,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" onAction="#checkava" prefHeight="64.0" prefWidth="260.0" style="-fx-font-size: 23;" stylesheets="@../../../stylesheets/button.css" text="View Bookings" GridPane.rowIndex="1">
+                  <Button mnemonicParsing="false" onAction="#checkava" prefHeight="64.0" prefWidth="260.0" style="-fx-font-size: 23;" stylesheets="@../../../stylesheets/button.css" text="Check Availability" GridPane.rowIndex="1">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -86,6 +86,11 @@
                      </effect>
                   </Button>
                   <Button mnemonicParsing="false" onAction="#gotocancel" prefHeight="68.0" prefWidth="247.0" style="-fx-font-size: 24;" stylesheets="@../../../stylesheets/button.css" text="Cancel Booking" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#view" prefHeight="68.0" prefWidth="285.0" style="-fx-font-size: 25px;" stylesheets="@../../../stylesheets/button.css" text="View Bookings" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <effect>
                         <DropShadow />
                      </effect>

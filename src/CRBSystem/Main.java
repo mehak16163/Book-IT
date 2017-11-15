@@ -171,6 +171,15 @@ public class Main extends Application {
 	public static void setCurr(User curr) {
 		Main.curr = curr;
 	}
+	public static void showFacBooking() throws IOException {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(Main.class.getResource("FacultyIntro/ViewBookings"));
+		mainLayout = loader.load();
+		Scene scene = new Scene(mainLayout);
+		primarystage.setTitle("Booking Requests");
+		primarystage.setScene(scene);
+		primarystage.show();
+	}
 	
 	public static void showRequests() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
@@ -191,6 +200,7 @@ public class Main extends Application {
 		primarystage.setScene(scene);
 		primarystage.show();
 	}
+	
 	public static void showReq() throws IOException {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(Main.class.getResource("student_intro/View_Bookings.fxml"));

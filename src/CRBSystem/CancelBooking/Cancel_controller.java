@@ -20,7 +20,7 @@ public class Cancel_controller {
 	@FXML
 	private TextField id;
 	@FXML
-	private TextArea reason;
+	private TextField reason;
 	@FXML
 	private Label warning;
    @FXML

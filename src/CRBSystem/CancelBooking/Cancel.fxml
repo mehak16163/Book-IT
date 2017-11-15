@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRBSystem.CancelBooking.Cancel_controller">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRBSystem.CancelBooking.Cancel_controller">
    <children>
       <HBox prefHeight="73.0" prefWidth="600.0">
          <children>
@@ -57,7 +57,7 @@
             </TextField>
          </children>
       </HBox>
-      <HBox alignment="CENTER" prefHeight="181.0" prefWidth="800.0">
+      <HBox alignment="CENTER" prefHeight="181.0" prefWidth="800.0" spacing="25.0">
          <children>
             <Label text="Reason for Cancellation">
                <font>
@@ -67,11 +67,7 @@
                   <Insets />
                </HBox.margin>
             </Label>
-            <TextArea fx:id="reason" prefHeight="125.0" prefWidth="259.0" promptText="Enter a valid reason">
-               <HBox.margin>
-                  <Insets left="40.0" />
-               </HBox.margin>
-            </TextArea>
+            <TextField fx:id="reason" prefHeight="31.0" prefWidth="347.0" />
          </children>
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">

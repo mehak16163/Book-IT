@@ -76,6 +76,9 @@ public class Faculty_IntroController {
 	@FXML private void gotoBook() throws IOException {
 		Main.gotobook();
 	}
+	@FXML private void view() throws IOException {
+		Main.showFacBooking();
+	}
 	
 	
 }
