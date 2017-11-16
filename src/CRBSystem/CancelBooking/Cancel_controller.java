@@ -14,6 +14,22 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+
+
+
+/**
+*
+* <h1> Cancel</h1>
+* <p>This class  contains Controller for Cancelling Requests.</p>
+*
+*
+* @author Mehak Gupta
+* @author Pankhuri Kasliwal
+* @version 1.0
+* @since October 20,2017
+*
+*
+*/
 public class Cancel_controller {
 	@FXML 
 	private Label result;
@@ -33,7 +49,17 @@ public class Cancel_controller {
 		   Main.showFacultyIntro();
    }
    
-   
+   /**
+   *
+   *
+   * <p> Cancel Requests. </p>
+   * @throws FileNotFoundException
+   * @throws ClassNotFoundException
+   * @throws IOException If an input or output exception occured.
+   *
+   *
+   *
+   */
    public void cancel() throws FileNotFoundException, ClassNotFoundException, IOException {
 	   result.setVisible(false);
 	   warning.setVisible(false);

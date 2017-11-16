@@ -8,7 +8,6 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-
 import Backend.Request;
 import Backend.Room;
 import Backend.Student;
@@ -20,6 +19,16 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import java.time.temporal.ChronoUnit;
+
+
+/**
+*
+*
+*
+* <h1> Respond to Request </p>
+* 
+*
+*/
 public class Respond_Controller {
 	@FXML
 	private Label acce;
@@ -36,6 +45,17 @@ public class Respond_Controller {
 	private ObservableList<String> list = FXCollections.observableArrayList();
 
 	@FXML
+
+	/**
+	*
+	*
+	*
+	* @throws FileNotFoundException
+	* @throws ClassNotFoundException
+	* @throws IOException If an input or output exception occured.
+	*
+	*
+	*/
 	private void list() throws FileNotFoundException, ClassNotFoundException, IOException {
 		list.clear();
 		acce.setVisible(false);
@@ -81,6 +101,17 @@ public class Respond_Controller {
 	}
 	
 	@FXML
+
+	/**
+	*
+	*
+	* <p> Accepting Requests. </p>
+	* @throws FileNotFoundException
+	* @throws ClassNotFoundException
+	* @throws IOException If an input or output exception occured.
+	*
+	*
+	*/
 	private void accept() throws FileNotFoundException, ClassNotFoundException, IOException {
 		acce.setVisible(false);
 		if (id.getText().equals(""))
@@ -117,10 +148,21 @@ public class Respond_Controller {
 		s.getRequests().remove(request.getId());
 		s.getRequests().put(request.getId(), request);
 		s.serialise();
-		
 	}
 	
 	@FXML
+
+
+	/**
+	*
+	*
+	* <p> Rejecting Requests. </p>
+	* @throws FileNotFoundException
+	* @throws ClassNotFoundException
+	* @throws IOException If an input or output exception occured.
+	*
+	*
+	*/
 	public void reject() throws FileNotFoundException, ClassNotFoundException, IOException {
 		acce.setVisible(false);
 		if (id.getText().equals(""))
@@ -141,8 +183,4 @@ public class Respond_Controller {
 		s.getRequests().remove(request.getId());
 		s.serialise();
 	}
-	
-	
-		
-	
 }
