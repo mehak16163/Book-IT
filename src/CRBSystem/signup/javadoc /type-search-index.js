@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"CRBSystem.signup","l":"SignUpPageController"}]

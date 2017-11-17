@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"CRBSystem.student_intro","c":"BookRoomController","l":"BookRoomController()"},{"p":"CRBSystem.student_intro","c":"BookRoomController","l":"gotoStudentIntro()"},{"p":"CRBSystem.student_intro","c":"BookRoomController","l":"reset()"},{"p":"CRBSystem.student_intro","c":"BookRoomController","l":"submit()"}]

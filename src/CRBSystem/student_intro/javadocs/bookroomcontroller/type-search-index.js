@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"CRBSystem.student_intro","l":"BookRoomController"}]
